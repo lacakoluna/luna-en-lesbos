@@ -1,254 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Luna en Lesbos</title>
-
-  <!-- TAILWIND -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- FUENTE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-
-    body{
-      font-family: 'Inter', sans-serif;
-      background: black;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    /* CARRUSEL */
-
-    @keyframes scroll {
-      0%{
-        transform: translateX(0);
-      }
-
-      100%{
-        transform: translateX(-50%);
-      }
-    }
-
-    .animate-scroll{
-      animation: scroll 35s linear infinite;
-    }
-
-    .animate-scroll:hover{
-      animation-play-state: paused;
-    }
-
-  </style>
-
-</head>
-
-<body class="min-h-screen bg-black text-white overflow-x-hidden">
-
-<!-- HEADER -->
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/30 border-b border-fuchsia-500/10">
-
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-    <!-- LOGO -->
-    <div class="flex items-center gap-4">
-
-      <img 
-        src="lunal.png"
-        alt="Luna en Lesbos"
-        class="h-14 w-auto"
-      >
-
-      <h1 class="text-2xl font-black text-fuchsia-300">
-        Luna en Lesbos
-      </h1>
-
-    </div>
-
-    <!-- MENU -->
-    <nav class="hidden md:flex gap-8 text-sm text-gray-300">
-
-      <a href="#quienes" class="hover:text-fuchsia-300 transition">
-        Quienes Somos
-      </a>
-
-      <a href="#eventos" class="hover:text-fuchsia-300 transition">
-        Eventos
-      </a>
-
-      <a href="#galeria" class="hover:text-fuchsia-300 transition">
-        Galería
-      </a>
-
-      <a href="#contacto" class="hover:text-fuchsia-300 transition">
-        Contacto
-      </a>
-
-    </nav>
-
-    <!-- BOTON -->
-    <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-5 py-2 rounded-full font-semibold">
-
-      ÚNETE
-
-    </button>
-
-  </div>
-
-</header>
-
-<!-- HERO -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-
-  <!-- FONDO OSCURO -->
-  <div class="absolute inset-0 bg-black"></div>
-
-  <!-- FOTO FONDO -->
-  <img 
-    src="foto1.jpg"
-    class="absolute inset-0 w-full h-full object-cover opacity-30"
-  >
-
-  <!-- OVERLAY OSCURO -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-fuchsia-950/40 to-black"></div>
-
-  <!-- LUCES -->
-  <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-fuchsia-600/20 blur-3xl rounded-full"></div>
-
-  <!-- CONTENIDO -->
-  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
-
-    <p class="uppercase tracking-[8px] text-fuchsia-200 text-sm mb-6">
-
-      Comunidad • Eventos • Mujeres
-
-    </p>
-
-    <h1 class="text-5xl md:text-8xl font-black leading-none mb-8">
-
-      Más que una junta.<br>
-      Somos Una comunidad.
-
-    </h1>
-
-    <p class="max-w-4xl mx-auto text-xl md:text-2xl text-gray-200 leading-relaxed mb-12">
-
-      Eventos, juntas, cultura y conexión
-      para mujeres lesbianas Chile.
-
-    </p>
-
-    <div class="flex flex-col md:flex-row gap-5 justify-center">
-
-      <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full text-lg font-bold shadow-2xl shadow-fuchsia-500/30">
-
-        Explorar eventos
-
-      </button>
-
-      <button class="border border-fuchsia-400 hover:bg-fuchsia-500/10 transition px-10 py-5 rounded-full text-lg font-semibold">
-
-        Ver galería
-
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CARRUSEL -->
-<section class="relative py-12 overflow-hidden bg-black">
-
-  <!-- DIFUMINADO IZQUIERDA -->
-  <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
-
-  <!-- DIFUMINADO DERECHA -->
-  <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
-
-  <div class="flex gap-6 animate-scroll w-max">
-
-    <!-- FOTO -->
-    <img src="foto1.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto2.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto3.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto4.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <!-- DUPLICADAS -->
-    <img src="foto1.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto2.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto3.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-    <img src="foto4.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
-
-  </div>
-
-</section>
-
-<!-- QUIENES SOMOS -->
-<section id="quienes" class="max-w-7xl mx-auto py-28 px-6">
-
-  <div class="grid md:grid-cols-2 gap-20 items-center">
-
-    <!-- FOTO -->
-    <div class="relative">
-
-      <img
-        src="foto2.jpg"
-        class="rounded-[35px] border border-fuchsia-500/20 shadow-2xl"
-      >
-
-      <div class="absolute inset-0 rounded-[35px] bg-fuchsia-500/10"></div>
-
-    </div>
-
-    <!-- TEXTO -->
-    <div>
-
-      <p class="uppercase tracking-[5px] text-fuchsia-300 text-sm mb-5">
-
-        QUIENES SOMOS
-
-      </p>
-
-      <h2 class="text-5xl md:text-6xl font-black leading-tight mb-8">
-
-        Creamos espacios
-        reales y seguros.
-
-      </h2>
-
-      <p class="text-lg text-gray-300 leading-relaxed mb-6">
-
-        <!-- TEXTO -->
+<!-- TEXTO -->
 <div>
 
-  <p class="uppercase tracking-[5px] text-fuchsia-300 text-sm mb-5">
+  <!-- TITULO PEQUEÑO -->
+  <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-6">
 
     QUIENES SOMOS
 
   </p>
 
-  <h1 class="text-5xl md:text-6xl font-black leading-tight mb-8">
+  <!-- TITULO GRANDE -->
+  <h2 class="text-5xl md:text-7xl font-black leading-[0.95] mb-10">
+
+    Creamos espacios<br>
+    reales y seguros.
+
+  </h2>
+
+  <!-- SUBTITULO -->
+  <h3 class="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
 
     Más que una fiesta.<br>
     Una comunidad real.
 
-  </h1>
+  </h3>
 
+  <!-- TEXO -->
   <p class="text-lg text-gray-300 leading-relaxed mb-6">
 
     Luna en Lesbos nace como un espacio creado por y para mujeres lesbianas
@@ -257,19 +33,11 @@
 
   </p>
 
-  <p class="text-lg text-gray-400 leading-relaxed mb-6">
+  <p class="text-lg text-gray-400 leading-relaxed mb-10">
 
-    Somos mucho más que un evento:
-    creamos experiencias donde la música, la comedia,
-    el arte y la conversación se encuentran en un mismo lugar.
-
-  </p>
-
-  <p class="text-lg text-gray-400 leading-relaxed mb-8">
-
-    Nuestro objetivo es generar encuentros reales,
-    potenciar el talento femenino y construir una comunidad
-    diversa, visible y poderosa.
+    Creamos experiencias donde la música, la comedia,
+    el arte y la conversación se encuentran en un mismo lugar,
+    generando conexiones reales y momentos inolvidables.
 
   </p>
 
@@ -291,7 +59,7 @@
       <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
 
       <p class="text-gray-300 text-lg">
-        Humor como herramienta de conexión
+        Humor y conexión real
       </p>
 
     </div>
@@ -306,18 +74,9 @@
 
     </div>
 
-    <div class="flex items-center gap-3">
-
-      <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
-
-      <p class="text-gray-300 text-lg">
-        Diversión, identidad y experiencias reales
-      </p>
-
-    </div>
-
   </div>
 
+  <!-- BOTON -->
   <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-8 py-4 rounded-full font-bold">
 
     Únete a la comunidad
@@ -325,184 +84,3 @@
   </button>
 
 </div>
-
-      </p>
-
-
-
-</section>
-
-<!-- EVENTOS -->
-<section id="eventos" class="py-28 px-6 bg-fuchsia-950/10 border-y border-fuchsia-500/10">
-
-  <div class="max-w-7xl mx-auto">
-
-    <div class="mb-14">
-
-      <p class="uppercase tracking-[5px] text-fuchsia-300 text-sm mb-4">
-
-        EXPERIENCIAS
-
-      </p>
-
-      <h2 class="text-5xl md:text-6xl font-black">
-
-        Próximos Eventos
-
-      </h2>
-
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
-
-        <img src="foto1.jpg" class="h-72 w-full object-cover">
-
-        <div class="p-7">
-
-          <h3 class="text-3xl font-bold mb-3">
-            Comedy Night
-          </h3>
-
-          <p class="text-gray-300 mb-7">
-            Stand-up comedy, risas y comunidad.
-          </p>
-
-          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
-
-        <img src="foto2.jpg" class="h-72 w-full object-cover">
-
-        <div class="p-7">
-
-          <h3 class="text-3xl font-bold mb-3">
-            Sunset Party
-          </h3>
-
-          <p class="text-gray-300 mb-7">
-            Música, experiencias y conexión.
-          </p>
-
-          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
-
-        <img src="foto3.jpg" class="h-72 w-full object-cover">
-
-        <div class="p-7">
-
-          <h3 class="text-3xl font-bold mb-3">
-            Queer Experience
-          </h3>
-
-          <p class="text-gray-300 mb-7">
-            Cultura queer y experiencias premium.
-          </p>
-
-          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALERIA -->
-<section id="galeria" class="max-w-7xl mx-auto py-28 px-6">
-
-  <div class="mb-14">
-
-    <p class="uppercase tracking-[5px] text-fuchsia-300 text-sm mb-4">
-
-      GALERÍA
-
-    </p>
-
-    <h2 class="text-5xl md:text-6xl font-black">
-
-      Así se vive Luna
-
-    </h2>
-
-  </div>
-
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-
-    <img src="foto1.jpg" class="rounded-3xl h-72 object-cover w-full hover:scale-105 transition">
-
-    <img src="foto2.jpg" class="rounded-3xl h-72 object-cover w-full hover:scale-105 transition">
-
-    <img src="foto3.jpg" class="rounded-3xl h-72 object-cover w-full hover:scale-105 transition">
-
-    <img src="foto4.jpg" class="rounded-3xl h-72 object-cover w-full hover:scale-105 transition">
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-<section class="py-24 px-6">
-
-  <div class="max-w-6xl mx-auto bg-gradient-to-r from-fuchsia-700/30 to-violet-700/20 border border-fuchsia-500/20 rounded-[45px] p-16 text-center">
-
-    <h2 class="text-5xl md:text-6xl font-black mb-8">
-
-      Sé parte de Luna en Lesbos
-
-    </h2>
-
-    <p class="max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed mb-10">
-
-      Vive fiestas, comunidad, cultura y experiencias únicas
-      junto a mujeres lesbianas y queer de todo Chile.
-
-    </p>
-
-    <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full text-xl font-bold shadow-2xl shadow-fuchsia-500/30">
-
-      Quiero unirme
-
-    </button>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer id="contacto" class="border-t border-fuchsia-500/10 py-14 text-center text-gray-400">
-
-  <p class="mb-3 text-lg">
-    © Luna en Lesbos
-  </p>
-
-  <p>
-    Comunidad queer premium · Santiago de Chile
-  </p>
-
-</footer>
-
-</body>
-</html>
