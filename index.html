@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Luna en Lesbos</title>
 
@@ -18,72 +18,32 @@
   <style>
 
     body{
-      font-family:'Inter', sans-serif;
-      background:black;
+      font-family: 'Inter', sans-serif;
+      background: black;
     }
 
     html{
       scroll-behavior:smooth;
     }
 
-    /* HERO CARRUSEL */
+    /* CARRUSEL */
 
     @keyframes scroll {
-
       0%{
-        transform:translateX(0);
+        transform: translateX(0);
       }
 
       100%{
-        transform:translateX(-50%);
+        transform: translateX(-50%);
       }
-
     }
 
     .animate-scroll{
-      animation:scroll 35s linear infinite;
+      animation: scroll 35s linear infinite;
     }
 
     .animate-scroll:hover{
-      animation-play-state:paused;
-    }
-
-    /* GALERIA */
-
-    @keyframes galleryScroll {
-
-      0%{
-        transform:translateX(0);
-      }
-
-      100%{
-        transform:translateX(-50%);
-      }
-
-    }
-
-    .animate-gallery{
-      animation:galleryScroll 45s linear infinite;
-    }
-
-    .animate-gallery:hover{
-      animation-play-state:paused;
-    }
-
-    .gallery-img{
-
-      width:420px;
-      height:520px;
-      object-fit:cover;
-      border-radius:30px;
-      cursor:pointer;
-      transition:0.4s;
-      border:1px solid rgba(255,0,255,0.15);
-
-    }
-
-    .gallery-img:hover{
-      transform:scale(1.04);
+      animation-play-state: paused;
     }
 
   </style>
@@ -100,7 +60,7 @@
     <!-- LOGO -->
     <div class="flex items-center gap-4">
 
-      <img
+      <img 
         src="lunal.png"
         alt="Luna en Lesbos"
         class="h-14 w-auto"
@@ -134,15 +94,11 @@
     </nav>
 
     <!-- BOTON -->
-    <a
-      href="https://www.instagram.com/lunaenlesbos/"
-      target="_blank"
-      class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-5 py-2 rounded-full font-semibold"
-    >
+    <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-5 py-2 rounded-full font-semibold">
 
       ÚNETE
 
-    </a>
+    </button>
 
   </div>
 
@@ -151,19 +107,19 @@
 <!-- HERO -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-  <!-- FONDO -->
+  <!-- FONDO OSCURO -->
   <div class="absolute inset-0 bg-black"></div>
 
-  <!-- FOTO -->
-  <img
+  <!-- FOTO FONDO -->
+  <img 
     src="foto1.jpg"
     class="absolute inset-0 w-full h-full object-cover opacity-30"
   >
 
-  <!-- OVERLAY -->
+  <!-- OVERLAY OSCURO -->
   <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-fuchsia-950/40 to-black"></div>
 
-  <!-- LUZ -->
+  <!-- LUCES -->
   <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-fuchsia-600/20 blur-3xl rounded-full"></div>
 
   <!-- CONTENIDO -->
@@ -178,36 +134,30 @@
     <h1 class="text-5xl md:text-8xl font-black leading-none mb-8">
 
       Más que una junta.<br>
-      Somos una comunidad.
+      Somos Una comunidad.
 
     </h1>
 
     <p class="max-w-4xl mx-auto text-xl md:text-2xl text-gray-200 leading-relaxed mb-12">
 
       Eventos, juntas, cultura y conexión
-      para mujeres lesbianas en Chile.
+      para mujeres lesbianas Chile.
 
     </p>
 
     <div class="flex flex-col md:flex-row gap-5 justify-center">
 
-      <a
-        href="#eventos"
-        class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full text-lg font-bold shadow-2xl shadow-fuchsia-500/30"
-      >
+      <button class="bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full text-lg font-bold shadow-2xl shadow-fuchsia-500/30">
 
         Explorar eventos
 
-      </a>
+      </button>
 
-      <a
-        href="#galeria"
-        class="border border-fuchsia-400 hover:bg-fuchsia-500/10 transition px-10 py-5 rounded-full text-lg font-semibold"
-      >
+      <button class="border border-fuchsia-400 hover:bg-fuchsia-500/10 transition px-10 py-5 rounded-full text-lg font-semibold">
 
         Ver galería
 
-      </a>
+      </button>
 
     </div>
 
@@ -218,12 +168,15 @@
 <!-- CARRUSEL -->
 <section class="relative py-12 overflow-hidden bg-black">
 
+  <!-- DIFUMINADO IZQUIERDA -->
   <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
 
+  <!-- DIFUMINADO DERECHA -->
   <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
 
   <div class="flex gap-6 animate-scroll w-max">
 
+    <!-- FOTO -->
     <img src="foto1.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
 
     <img src="foto2.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
@@ -244,7 +197,6 @@
   </div>
 
 </section>
-
 <!-- QUIENES SOMOS -->
 <section id="quienes" class="max-w-7xl mx-auto py-32 px-6">
 
@@ -259,6 +211,7 @@
         class="w-full h-[650px] object-cover rounded-[40px] border border-fuchsia-500/20 shadow-2xl"
       >
 
+      <!-- OVERLAY -->
       <div class="absolute inset-0 rounded-[40px] bg-gradient-to-t from-black/40 to-transparent"></div>
 
     </div>
@@ -266,12 +219,14 @@
     <!-- TEXTO -->
     <div class="max-w-2xl">
 
+      <!-- TITULO PEQUEÑO -->
       <p class="uppercase tracking-[8px] text-fuchsia-300 text-sm mb-6">
 
         QUIENES SOMOS
 
       </p>
 
+      <!-- TITULO -->
       <h2 class="text-5xl md:text-7xl font-black leading-[0.95] mb-8">
 
         Creamos espacios
@@ -279,6 +234,7 @@
 
       </h2>
 
+      <!-- SUBTITULO -->
       <h3 class="text-2xl md:text-4xl font-bold text-white mb-8 leading-tight">
 
         Más que una fiesta.<br>
@@ -286,6 +242,7 @@
 
       </h3>
 
+      <!-- TEXTO -->
       <p class="text-xl text-gray-300 leading-relaxed mb-6">
 
         Luna en Lesbos nace como un espacio creado por y para mujeres lesbianas
@@ -297,17 +254,246 @@
       <p class="text-lg text-gray-400 leading-relaxed mb-10">
 
         Creamos experiencias donde la música, la comedia,
-        el arte y la conversación se encuentran en un mismo lugar.
+        el arte y la conversación se encuentran en un mismo lugar,
+        generando conexiones reales y momentos inolvidables.
 
       </p>
 
-      <a
-        href="https://www.instagram.com/lunaenlesbos/"
-        target="_blank"
-        class="inline-block bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-fuchsia-500/30"
+      <!-- LISTA -->
+      <div class="space-y-5 mb-12">
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Libertad de expresión
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Humor y conexión real
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Visibilidad lésbica y espacios seguros
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- BOTON -->
+      <a 
+  href="https://www.instagram.com/lunaenlesbos/" 
+  target="_blank"
+  class="inline-block bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-fuchsia-500/30"
+>
+
+  Únete a la comunidad
+
+</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos" class="py-28 px-6 bg-fuchsia-950/10 border-y border-fuchsia-500/10">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- TITULO -->
+    <div class="mb-16 text-center">
+
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-4">
+
+        ENCUENTRA TU ESTRELLA 
+
+      </p>
+
+      <h2 class="text-5xl md:text-6xl font-black">
+
+        NUESTROS EVENTOS
+
+      </h2>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- EVENTO 1 -->
+      <div
+        onclick="openModal(
+        'evento1.jpg',
+        'LUNA 3 EDICIÓN JUNIO 2026',
+        'Junta de mujeres lesbianas, comunidad y risas toda la noche.',
+        'Viernes 12 de junio · 19:00 hrs · Santiago',
+        'https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
       >
 
-        Únete a la comunidad
+        <img src="evento1.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            LUNA EN LESBOS EDICIÓN 3 
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            JUNTA DE CHICAS 
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div
+        onclick="openModal(
+        'evento2.jpg',
+        'LUNA 2°EDICIÓN MAYO 2026',
+        'Nuestra junta de mayo las esperamos',
+        'Viernes 8 de mayo · 19:00 hrs · bellavista',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
+
+        <img src="evento2.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            Sunset Party
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            Música y experiencias premium.
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div
+        onclick="openModal(
+        'evento3.jpg',
+        '1° LUNA DEL 2026',
+        'CONOCE CHICAS , evento solo para mujeres lesbianas este 2026 una vez al mes nos vemos',
+        'Viernes 10 de abril · 19:00 hrs · Santiago',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
+
+        <img src="evento3.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            Queer Experience
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            Cultura queer y comunidad.
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div
+  id="eventModal"
+  class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-6"
+>
+
+  <div class="bg-[#111] max-w-2xl w-full rounded-[35px] overflow-hidden border border-fuchsia-500/20 relative">
+
+    <!-- CERRAR -->
+    <button
+      onclick="closeModal()"
+      class="absolute top-5 right-5 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full z-20"
+    >
+      ✕
+    </button>
+
+    <!-- FOTO -->
+    <img
+      id="modalImage"
+      src=""
+      class="w-full h-[450px] object-cover"
+    >
+
+    <!-- CONTENIDO -->
+    <div class="p-8">
+
+      <h3
+        id="modalTitle"
+        class="text-4xl font-black mb-5"
+      ></h3>
+
+      <p
+        id="modalDescription"
+        class="text-gray-300 text-lg leading-relaxed mb-6"
+      ></p>
+
+      <p
+        id="modalDate"
+        class="text-fuchsia-300 mb-8 text-lg"
+      ></p>
+
+      <!-- BOTON -->
+      <a
+        id="modalLink"
+        href="#"
+        target="_blank"
+        class="block text-center bg-fuchsia-500 hover:bg-fuchsia-400 transition py-5 rounded-full text-lg font-bold"
+      >
+
+        Comprar en Passline
 
       </a>
 
@@ -315,7 +501,197 @@
 
   </div>
 
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function openModal(image, title, description, date, link){
+
+  document.getElementById('modalImage').src = image;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalDate').innerText = date;
+  document.getElementById('modalLink').href = link;
+
+  document.getElementById('eventModal').classList.remove('hidden');
+  document.getElementById('eventModal').classList.add('flex');
+
+}
+
+function closeModal(){
+
+  document.getElementById('eventModal').classList.add('hidden');
+  document.getElementById('eventModal').classList.remove('flex');
+
+}
+
+</script>
+
+<!-- GALERIA -->
+<section id="galeria" class="py-28 overflow-hidden bg-black">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TITULO -->
+    <div class="text-center mb-16">
+
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-4">
+
+        GALERÍA
+
+      </p>
+
+      <h2 class="text-5xl md:text-6xl font-black mb-6">
+
+        Así se vive Luna
+
+      </h2>
+
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+
+        Comunidad, fiestas, humor, cultura y encuentros reales.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- CARRUSEL -->
+  <div class="relative">
+
+    <!-- DIFUMINADO -->
+    <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
+
+    <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
+
+    <!-- SLIDER -->
+    <div class="flex gap-6 animate-gallery w-max px-6">
+
+      <!-- FOTO -->
+      <img onclick="openGallery('galeria1.jpg')" src="galeria1.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria2.jpg')" src="galeria2.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria3.jpg')" src="galeria3.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria4.jpg')" src="galeria4.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria5.jpg')" src="galeria5.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria6.jpg')" src="galeria6.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria7.jpg')" src="galeria7.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria8.jpg')" src="galeria8.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria9.jpg')" src="galeria9.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria10.jpg')" src="galeria10.jpg" class="gallery-img">
+
+      <!-- DUPLICADAS -->
+      <img onclick="openGallery('galeria1.jpg')" src="galeria1.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria2.jpg')" src="galeria2.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria3.jpg')" src="galeria3.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria4.jpg')" src="galeria4.jpg" class="gallery-img">
+
+    </div>
+
+  </div>
+
 </section>
+
+<!-- MODAL GALERIA -->
+<div
+  id="galleryModal"
+  class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50 p-6"
+>
+
+  <!-- BOTON -->
+  <button
+    onclick="closeGallery()"
+    class="absolute top-6 right-6 text-white text-5xl z-50"
+  >
+    ×
+  </button>
+
+  <!-- IMAGEN -->
+  <img
+    id="galleryImage"
+    src=""
+    class="max-w-full max-h-[90vh] rounded-3xl shadow-2xl"
+  >
+
+</div>
+
+<!-- ESTILOS -->
+<style>
+
+@keyframes galleryScroll {
+
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(-50%);
+  }
+
+}
+
+.animate-gallery{
+  animation: galleryScroll 45s linear infinite;
+}
+
+.animate-gallery:hover{
+  animation-play-state: paused;
+}
+
+.gallery-img{
+
+  width: 420px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid rgba(255,0,255,0.15);
+
+}
+
+.gallery-img:hover{
+
+  transform: scale(1.04);
+
+}
+
+</style>
+
+<!-- SCRIPT -->
+<script>
+
+function openGallery(image){
+
+  document.getElementById("galleryImage").src = image;
+
+  document.getElementById("galleryModal").classList.remove("hidden");
+  document.getElementById("galleryModal").classList.add("flex");
+
+}
+
+function closeGallery(){
+
+  document.getElementById("galleryModal").classList.add("hidden");
+  document.getElementById("galleryModal").classList.remove("flex");
+
+}
+
+</script>
+
 
 <!-- CONTACTO -->
 <section id="contacto" class="py-32 px-6 border-t border-fuchsia-500/10 bg-gradient-to-b from-black to-fuchsia-950/10">
@@ -345,6 +721,7 @@
 
       </p>
 
+      <!-- INFO -->
       <div class="space-y-6">
 
         <div>
@@ -367,18 +744,30 @@
 
         </div>
 
+        <div>
+
+          <p class="text-fuchsia-300 text-sm uppercase tracking-[4px] mb-2">
+
+            Comunidad
+
+          </p>
+
+          <p class="text-gray-400 text-lg">
+
+            Santiago de Chile · Mujeres lesbianas
+
+          </p>
+
+        </div>
+
       </div>
 
     </div>
 
-    <!-- FORM -->
+    <!-- FORMULARIO -->
     <div class="bg-white/5 border border-fuchsia-500/20 rounded-[40px] p-10 backdrop-blur-xl">
 
-      <form
-        action="https://formspree.io/f/xkoewwdw"
-        method="POST"
-        class="space-y-6"
-      >
+      <form class="space-y-6">
 
         <!-- NOMBRE -->
         <div>
@@ -391,9 +780,7 @@
 
           <input
             type="text"
-            name="nombre"
             placeholder="Tu nombre"
-            required
             class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400"
           >
 
@@ -410,9 +797,7 @@
 
           <input
             type="email"
-            name="email"
             placeholder="tunombre@email.com"
-            required
             class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400"
           >
 
@@ -428,10 +813,8 @@
           </label>
 
           <textarea
-            name="mensaje"
             rows="6"
             placeholder="Escribe tu mensaje..."
-            required
             class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400 resize-none"
           ></textarea>
 
@@ -467,6 +850,3 @@
   </p>
 
 </footer>
-
-</body>
-</html>
