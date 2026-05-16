@@ -312,13 +312,15 @@
 </section>
 
 <!-- EVENTOS -->
+<!-- EVENTOS -->
 <section id="eventos" class="py-28 px-6 bg-fuchsia-950/10 border-y border-fuchsia-500/10">
 
   <div class="max-w-7xl mx-auto">
 
-    <div class="mb-14">
+    <!-- TITULO -->
+    <div class="mb-16 text-center">
 
-      <p class="uppercase tracking-[5px] text-fuchsia-300 text-sm mb-4">
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-4">
 
         EXPERIENCIAS
 
@@ -326,18 +328,28 @@
 
       <h2 class="text-5xl md:text-6xl font-black">
 
-        Próximos Eventos
+        Eventos & Experiences
 
       </h2>
 
     </div>
 
+    <!-- GRID -->
     <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
+      <!-- EVENTO 1 -->
+      <div
+        onclick="openModal(
+        'evento1.jpg',
+        'Comedy Night',
+        'Stand-up comedy, humor lésbico, comunidad y risas toda la noche.',
+        'Viernes 30 Agosto · 21:00 hrs · Santiago',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
 
-        <img src="foto1.jpg" class="h-72 w-full object-cover">
+        <img src="evento1.jpg" class="h-80 w-full object-cover">
 
         <div class="p-7">
 
@@ -346,21 +358,32 @@
           </h3>
 
           <p class="text-gray-300 mb-7">
-            Stand-up comedy, risas y comunidad.
+            Stand-up comedy y comunidad.
           </p>
 
           <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
+
+            Ver evento
+
           </button>
 
         </div>
 
       </div>
 
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
+      <!-- EVENTO 2 -->
+      <div
+        onclick="openModal(
+        'evento2.jpg',
+        'Sunset Party',
+        'Música, experiencias y conexión entre mujeres.',
+        'Sábado 14 Septiembre · 20:00 hrs · Providencia',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
 
-        <img src="foto2.jpg" class="h-72 w-full object-cover">
+        <img src="evento2.jpg" class="h-80 w-full object-cover">
 
         <div class="p-7">
 
@@ -369,21 +392,32 @@
           </h3>
 
           <p class="text-gray-300 mb-7">
-            Música, experiencias y conexión.
+            Música y experiencias premium.
           </p>
 
           <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
+
+            Ver evento
+
           </button>
 
         </div>
 
       </div>
 
-      <!-- CARD -->
-      <div class="bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300">
+      <!-- EVENTO 3 -->
+      <div
+        onclick="openModal(
+        'evento3.jpg',
+        'Queer Experience',
+        'Fiesta, comunidad, cultura queer y experiencias inolvidables.',
+        'Viernes 4 Octubre · 22:00 hrs · Santiago',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
 
-        <img src="foto3.jpg" class="h-72 w-full object-cover">
+        <img src="evento3.jpg" class="h-80 w-full object-cover">
 
         <div class="p-7">
 
@@ -392,11 +426,13 @@
           </h3>
 
           <p class="text-gray-300 mb-7">
-            Cultura queer y experiencias premium.
+            Cultura queer y comunidad.
           </p>
 
           <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
-            Comprar entrada
+
+            Ver evento
+
           </button>
 
         </div>
@@ -408,6 +444,90 @@
   </div>
 
 </section>
+
+<!-- MODAL -->
+<div
+  id="eventModal"
+  class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-6"
+>
+
+  <div class="bg-[#111] max-w-2xl w-full rounded-[35px] overflow-hidden border border-fuchsia-500/20 relative">
+
+    <!-- CERRAR -->
+    <button
+      onclick="closeModal()"
+      class="absolute top-5 right-5 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full z-20"
+    >
+      ✕
+    </button>
+
+    <!-- FOTO -->
+    <img
+      id="modalImage"
+      src=""
+      class="w-full h-[450px] object-cover"
+    >
+
+    <!-- CONTENIDO -->
+    <div class="p-8">
+
+      <h3
+        id="modalTitle"
+        class="text-4xl font-black mb-5"
+      ></h3>
+
+      <p
+        id="modalDescription"
+        class="text-gray-300 text-lg leading-relaxed mb-6"
+      ></p>
+
+      <p
+        id="modalDate"
+        class="text-fuchsia-300 mb-8 text-lg"
+      ></p>
+
+      <!-- BOTON -->
+      <a
+        id="modalLink"
+        href="#"
+        target="_blank"
+        class="block text-center bg-fuchsia-500 hover:bg-fuchsia-400 transition py-5 rounded-full text-lg font-bold"
+      >
+
+        Comprar en Passline
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function openModal(image, title, description, date, link){
+
+  document.getElementById('modalImage').src = image;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalDate').innerText = date;
+  document.getElementById('modalLink').href = link;
+
+  document.getElementById('eventModal').classList.remove('hidden');
+  document.getElementById('eventModal').classList.add('flex');
+
+}
+
+function closeModal(){
+
+  document.getElementById('eventModal').classList.add('hidden');
+  document.getElementById('eventModal').classList.remove('flex');
+
+}
+
+</script>
 
 <!-- GALERIA -->
 <section id="galeria" class="max-w-7xl mx-auto py-28 px-6">
