@@ -577,13 +577,17 @@
 <!-- ========================= -->
 <!-- PROXIMO EVENTO LUNA STGO -->
 <!-- ========================= -->
-<section id="proximo-evento" class="relative py-28 bg-black text-white overflow-hidden">
+ <!-- ========================= -->
+<!-- EVENTO SANTIAGO -->
+<!-- ========================= -->
+
+<section id="proximo-evento-stgo" class="relative py-28 bg-black text-white overflow-hidden">
 
   <!-- FONDO -->
   <div class="absolute inset-0">
 
     <img
-      src="TU-FLYER-O-FOTO.jpg"
+      src="12junio.jpg"
       alt="Luna en Lesbos"
       class="w-full h-full object-cover opacity-20"
     >
@@ -625,6 +629,7 @@
             </div>
 
             <div>
+
               <p class="text-white/50 uppercase text-sm tracking-widest">
                 Fecha
               </p>
@@ -632,6 +637,7 @@
               <h3 class="text-2xl font-bold">
                 Viernes 12 de Junio · 19:00 hrs
               </h3>
+
             </div>
 
           </div>
@@ -644,6 +650,7 @@
             </div>
 
             <div>
+
               <p class="text-white/50 uppercase text-sm tracking-widest">
                 Bar Cabaret Piraña
               </p>
@@ -651,19 +658,23 @@
               <h3 class="text-2xl font-bold">
                 Bombero Núñez 365 · Recoleta · Santiago
               </h3>
+
             </div>
 
           </div>
 
         </div>
 
+        <!-- ========================= -->
         <!-- COUNTDOWN -->
+        <!-- ========================= -->
+
         <div class="grid grid-cols-4 gap-4 mb-12">
 
           <!-- DIAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="days" class="text-4xl font-black text-pink-500">
+            <div id="days-stgo" class="text-4xl font-black text-pink-500">
               00
             </div>
 
@@ -676,7 +687,7 @@
           <!-- HORAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="hours" class="text-4xl font-black text-pink-500">
+            <div id="hours-stgo" class="text-4xl font-black text-pink-500">
               00
             </div>
 
@@ -686,10 +697,10 @@
 
           </div>
 
-          <!-- MINUTOS -->
+          <!-- MIN -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="minutes" class="text-4xl font-black text-pink-500">
+            <div id="minutes-stgo" class="text-4xl font-black text-pink-500">
               00
             </div>
 
@@ -699,10 +710,10 @@
 
           </div>
 
-          <!-- SEGUNDOS -->
+          <!-- SEG -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="seconds" class="text-4xl font-black text-pink-500">
+            <div id="seconds-stgo" class="text-4xl font-black text-pink-500">
               00
             </div>
 
@@ -725,7 +736,7 @@
 
       </div>
 
-      <!-- DERECHA / FLYER -->
+      <!-- DERECHA -->
       <div class="relative">
 
         <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
@@ -746,56 +757,59 @@
 
 </section>
 
-<!-- SCRIPT COUNTDOWN -->
+<!-- ========================= -->
+<!-- SCRIPT COUNTDOWN STGO -->
+<!-- ========================= -->
+
 <script>
 
-  // FECHA EVENTO
-  const eventDate = new Date("June 12, 2026 19:00:00").getTime();
+const countdownStgo = new Date("June 12, 2026 19:00:00").getTime();
 
-  const countdown = setInterval(() => {
+const timerStgo = setInterval(function(){
 
-    const now = new Date().getTime();
+  const now = new Date().getTime();
 
-    const distance = eventDate - now;
+  const distance = countdownStgo - now;
 
-    // CALCULOS
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
 
-    const minutes = Math.floor(
-      (distance % (1000 * 60 * 60)) / (1000 * 60)
-    );
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
 
-    const seconds = Math.floor(
-      (distance % (1000 * 60)) / 1000
-    );
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
 
-    // INSERTAR
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("days-stgo").innerHTML = days;
+  document.getElementById("hours-stgo").innerHTML = hours;
+  document.getElementById("minutes-stgo").innerHTML = minutes;
+  document.getElementById("seconds-stgo").innerHTML = seconds;
 
-    // SI TERMINA
-    if (distance < 0) {
+  if(distance < 0){
 
-      clearInterval(countdown);
+    clearInterval(timerStgo);
 
-      document.getElementById("days").innerHTML = "00";
-      document.getElementById("hours").innerHTML = "00";
-      document.getElementById("minutes").innerHTML = "00";
-      document.getElementById("seconds").innerHTML = "00";
+    document.getElementById("days-stgo").innerHTML = "00";
+    document.getElementById("hours-stgo").innerHTML = "00";
+    document.getElementById("minutes-stgo").innerHTML = "00";
+    document.getElementById("seconds-stgo").innerHTML = "00";
 
-    }
+  }
 
-  }, 1000);
+},1000);
 
 </script>
 
-<!---PRÓXIMO EVENTO LLEGAMOS A VIÑA DEL MAR --->
+
+
+
 <!-- ========================= -->
 <!-- EVENTO VIÑA FINAL CORREGIDO -->
 <!-- ========================= -->
