@@ -1417,90 +1417,179 @@ const timer = setInterval(function() {
 </section>
 
 <!-- GALERÍA LUNA -->
-<!-- GALERÍA LUNA -->
 
-<section class="galeria-luna">
+<section class="luna-social-section">
 
-  <h2>✨ MOMENTOS LUNA ✨</h2>
+    <div class="luna-overlay"></div>
 
-  <div 
-    class="taggbox" 
-    style="width:100%;height:100%;overflow:auto;" 
-    data-widget-id="326527" 
-    data-website="1">
-  </div>
+    <div class="luna-content">
 
-  <script 
-    src="https://widget.taggbox.com/embed.min.js" 
-    type="text/javascript">
-  </script>
+        <span class="mini-title">
+            EXPERIENCIAS REALES
+        </span>
+
+        <h2>
+            ✨ MOMENTOS LUNA ✨
+        </h2>
+
+        <p>
+            Historias, encuentros, risas y recuerdos de nuestras noches.
+        </p>
+
+        <div class="gallery-wrapper">
+
+            <div class="taggbox"
+                style="width:100%;height:100%;overflow:auto;"
+                data-widget-id="326527"
+                data-website="1">
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
+<script src="https://widget.taggbox.com/embed.min.js"></script>
+
 <style>
 
-.galeria-luna{
-    padding:90px 20px;
+.luna-social-section{
 
-    background:
-    linear-gradient(
-    180deg,
-    #1a001f 0%,
-    #2d0036 35%,
-    #120014 100%
-    );
+    position:relative;
 
-    text-align:center;
-}
-
-.galeria-luna h2{
-    color:#fff;
-
-    font-size:3rem;
-
-    margin-bottom:50px;
-
-    letter-spacing:4px;
-
-    font-family:Arial,sans-serif;
-
-    text-shadow:
-    0 0 10px rgba(255,20,147,.6),
-    0 0 25px rgba(255,20,147,.3);
-}
-
-.taggbox{
-
-    border-radius:30px;
+    padding:120px 20px;
 
     overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,#ff00aa22 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#7a00ff33 0%,transparent 40%),
+    linear-gradient(180deg,#120014 0%,#1c0024 50%,#0a0010 100%);
+}
+
+.luna-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    url('https://www.transparenttextures.com/patterns/stardust.png');
+
+    opacity:.12;
+
+    pointer-events:none;
+}
+
+.luna-content{
+
+    position:relative;
+
+    z-index:2;
 
     max-width:1400px;
 
     margin:auto;
 
-    background:rgba(255,255,255,.04);
+    text-align:center;
+}
 
-    backdrop-filter:blur(12px);
+.mini-title{
 
-    border:1px solid rgba(255,255,255,.08);
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#ff7bd5;
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    backdrop-filter:blur(10px);
+}
+
+.luna-content h2{
+
+    color:#fff;
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    text-shadow:
+    0 0 15px rgba(255,0,170,.4),
+    0 0 35px rgba(122,0,255,.3);
+}
+
+.luna-content p{
+
+    color:#d3bfdc;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+}
+
+.gallery-wrapper{
+
+    padding:20px;
+
+    border-radius:35px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.08);
 
     box-shadow:
-    0 0 50px rgba(255,20,147,.18),
-    0 20px 80px rgba(0,0,0,.45);
-
-    padding:10px;
+    0 0 60px rgba(255,0,170,.12),
+    0 30px 80px rgba(0,0,0,.5);
 }
+
+/* ESCONDER COSAS FEAS DEL WIDGET */
+
+.gallery-wrapper .tb_social_wall_header{
+    display:none !important;
+}
+
+.gallery-wrapper .tb_load_btn{
+    border-radius:50px !important;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .galeria-luna{
-        padding:60px 15px;
+    .luna-social-section{
+        padding:80px 15px;
     }
 
-    .galeria-luna h2{
-        font-size:2rem;
-        letter-spacing:2px;
+    .luna-content h2{
+        font-size:2.3rem;
+    }
+
+    .luna-content p{
+        font-size:1rem;
     }
 
 }
