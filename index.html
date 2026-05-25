@@ -825,57 +825,109 @@
         </div>
 
         <!-- COUNTDOWN -->
-        <div class="grid grid-cols-4 gap-4 mb-12">
+<div class="grid grid-cols-4 gap-4 mb-12">
 
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+  <!-- DIAS -->
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="days" class="text-4xl font-black text-pink-500">
-              00
-            </div>
+    <div id="days-vina" class="text-4xl font-black text-pink-500">
+      00
+    </div>
 
-            <p class="text-white/50 text-sm uppercase mt-2">
-              00
-            </p>
+    <p class="text-white/50 text-sm uppercase mt-2">
+      Días
+    </p>
 
-          </div>
+  </div>
 
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+  <!-- HORAS -->
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="hours" class="text-4xl font-black text-pink-500">
-              00
-            </div>
+    <div id="hours-vina" class="text-4xl font-black text-pink-500">
+      00
+    </div>
 
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Horas
-            </p>
+    <p class="text-white/50 text-sm uppercase mt-2">
+      Horas
+    </p>
 
-          </div>
+  </div>
 
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+  <!-- MINUTOS -->
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="minutes" class="text-4xl font-black text-pink-500">
-              00
-            </div>
+    <div id="minutes-vina" class="text-4xl font-black text-pink-500">
+      00
+    </div>
 
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Min
-            </p>
+    <p class="text-white/50 text-sm uppercase mt-2">
+      Min
+    </p>
 
-          </div>
+  </div>
 
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+  <!-- SEGUNDOS -->
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
-            <div id="seconds" class="text-4xl font-black text-pink-500">
-              00
-            </div>
+    <div id="seconds-vina" class="text-4xl font-black text-pink-500">
+      00
+    </div>
 
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Seg
-            </p>
+    <p class="text-white/50 text-sm uppercase mt-2">
+      Seg
+    </p>
 
-          </div>
+  </div>
 
-        </div>
+</div>
+
+<!-- SCRIPT COUNTDOWN -->
+<script>
+
+const countdownVina = new Date("June 13, 2026 19:00:00").getTime();
+
+const timerVina = setInterval(function(){
+
+  const now = new Date().getTime();
+
+  const distance = countdownVina - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
+
+  document.getElementById("days-vina").innerHTML = days;
+  document.getElementById("hours-vina").innerHTML = hours;
+  document.getElementById("minutes-vina").innerHTML = minutes;
+  document.getElementById("seconds-vina").innerHTML = seconds;
+
+  if(distance < 0){
+
+    clearInterval(timerVina);
+
+    document.getElementById("days-vina").innerHTML = "00";
+    document.getElementById("hours-vina").innerHTML = "00";
+    document.getElementById("minutes-vina").innerHTML = "00";
+    document.getElementById("seconds-vina").innerHTML = "00";
+
+  }
+
+},1000);
+
+</script>
+       
 
         <!-- BOTON -->
         <a
