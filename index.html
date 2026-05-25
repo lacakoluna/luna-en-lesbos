@@ -1416,15 +1416,17 @@ const timer = setInterval(function() {
 
 </section>
 
-<!-- GALERÍA LUNA -->
+<!-- ========================= -->
+<!-- GALERÍA LUNA EN LESBOS -->
+<!-- ========================= -->
 
-<section class="luna-social-section">
+<section class="luna-gallery-section">
 
-    <div class="luna-overlay"></div>
+    <div class="luna-bg-glow"></div>
 
-    <div class="luna-content">
+    <div class="luna-gallery-content">
 
-        <span class="mini-title">
+        <span class="luna-badge">
             EXPERIENCIAS REALES
         </span>
 
@@ -1433,13 +1435,13 @@ const timer = setInterval(function() {
         </h2>
 
         <p>
-            Historias, encuentros, risas y recuerdos de nuestras noches.
+            Mujeres, música, conexión y noches que quedan para siempre 🌙
         </p>
 
-        <div class="gallery-wrapper">
+        <div class="gallery-box">
 
             <div class="taggbox"
-                style="width:100%;height:100%;overflow:auto;"
+                style="width:100%;height:900px;overflow:auto;"
                 data-widget-id="326527"
                 data-website="1">
             </div>
@@ -1454,217 +1456,207 @@ const timer = setInterval(function() {
 
 <style>
 
-.luna-social-section{
+/* ========================= */
+/* SECCIÓN GENERAL */
+/* ========================= */
+
+.luna-gallery-section{
 
     position:relative;
 
-    padding:120px 20px;
-
     overflow:hidden;
 
+    padding:120px 20px;
+
     background:
-    radial-gradient(circle at top left,#ff00aa22 0%,transparent 35%),
-    radial-gradient(circle at bottom right,#7a00ff33 0%,transparent 40%),
-    linear-gradient(180deg,#120014 0%,#1c0024 50%,#0a0010 100%);
+    radial-gradient(circle at top left,
+    rgba(255,0,140,.15) 0%,
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(132,0,255,.18) 0%,
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #120014 0%,
+    #1c0024 40%,
+    #09000d 100%
+    );
 }
 
-.luna-overlay{
+/* ========================= */
+/* EFECTOS DE FONDO */
+/* ========================= */
+
+.luna-bg-glow{
 
     position:absolute;
+
     inset:0;
 
     background:
     url('https://www.transparenttextures.com/patterns/stardust.png');
 
-    opacity:.12;
+    opacity:.08;
 
     pointer-events:none;
 }
 
-.luna-content{
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
+.luna-gallery-content{
 
     position:relative;
 
     z-index:2;
 
-    max-width:1400px;
+    max-width:1450px;
 
     margin:auto;
 
     text-align:center;
 }
 
-.mini-title{
+/* ========================= */
+/* BADGE */
+/* ========================= */
+
+.luna-badge{
 
     display:inline-block;
 
-    padding:10px 20px;
+    padding:12px 22px;
 
     border-radius:50px;
 
-    background:rgba(255,255,255,.08);
+    background:
+    rgba(255,255,255,.06);
 
-    color:#ff7bd5;
+    backdrop-filter:blur(12px);
 
-    font-size:.9rem;
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:#ff73d2;
+
+    font-size:.85rem;
 
     letter-spacing:3px;
 
     margin-bottom:25px;
 
-    backdrop-filter:blur(10px);
+    text-transform:uppercase;
 }
 
-.luna-content h2{
+/* ========================= */
+/* TITULO */
+/* ========================= */
 
-    color:#fff;
+.luna-gallery-content h2{
 
-    font-size:4rem;
+    color:white;
 
-    line-height:1.1;
-
-    margin-bottom:20px;
+    font-size:4.2rem;
 
     font-weight:900;
 
-    letter-spacing:3px;
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    letter-spacing:4px;
 
     text-shadow:
-    0 0 15px rgba(255,0,170,.4),
-    0 0 35px rgba(122,0,255,.3);
+    0 0 12px rgba(255,0,140,.45),
+    0 0 35px rgba(132,0,255,.25);
 }
 
-.luna-content p{
+/* ========================= */
+/* TEXTO */
+/* ========================= */
 
-    color:#d3bfdc;
+.luna-gallery-content p{
 
-    max-width:700px;
-
-    margin:0 auto 60px;
+    color:#d8bfdc;
 
     font-size:1.1rem;
 
-    line-height:1.7;
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    line-height:1.8;
 }
 
-.gallery-wrapper{
+/* ========================= */
+/* CONTENEDOR GALERÍA */
+/* ========================= */
 
-    padding:20px;
+.gallery-box{
 
     border-radius:35px;
 
+    overflow:hidden;
+
+    padding:15px;
+
     background:
-    rgba(255,255,255,.05);
+    rgba(255,255,255,.04);
 
     backdrop-filter:blur(20px);
 
     border:
-    1px solid rgba(255,255,255,.08);
+    1px solid rgba(255,255,255,.06);
 
     box-shadow:
-    0 0 60px rgba(255,0,170,.12),
-    0 30px 80px rgba(0,0,0,.5);
+    0 0 50px rgba(255,0,140,.12),
+    0 30px 80px rgba(0,0,0,.45);
 }
 
-/* ESCONDER COSAS FEAS DEL WIDGET */
+/* ========================= */
+/* TAGGBOX */
+/* ========================= */
 
-.gallery-wrapper .tb_social_wall_header{
-    display:none !important;
+.taggbox{
+
+    border-radius:25px;
+
+    overflow:hidden;
 }
 
-.gallery-wrapper .tb_load_btn{
-    border-radius:50px !important;
-}
-
+/* ========================= */
 /* MOBILE */
+/* ========================= */
 
 @media(max-width:768px){
 
-    .luna-social-section{
+    .luna-gallery-section{
+
         padding:80px 15px;
     }
 
-    .luna-content h2{
-        font-size:2.3rem;
+    .luna-gallery-content h2{
+
+        font-size:2.4rem;
+
+        letter-spacing:2px;
     }
 
-    .luna-content p{
+    .luna-gallery-content p{
+
         font-size:1rem;
     }
 
+    .gallery-box{
+
+        padding:10px;
+    }
+
 }
 
-/* FONDO GENERAL DEL WIDGET */
-
-.taggbox,
-.tb_theme_card,
-.tb_social_wall,
-.tb_wall_wrapper,
-.tb_container,
-.tb_feed_container{
-
-    background:#120014 !important;
-}
-
-/* HEADER BLANCO */
-
-.tb_social_wall_header{
-    background:#1b001f !important;
-    border:none !important;
-}
-
-/* TEXTO HEADER */
-
-.tb_social_wall_header *,
-.tb_title,
-.tb_wall_header_text{
-
-    color:white !important;
-}
-
-/* CARDS */
-
-.tb_card,
-.tb_post_container,
-.tb_data_container{
-
-    background:#1f0026 !important;
-
-    border-radius:20px !important;
-
-    overflow:hidden !important;
-
-    border:1px solid rgba(255,255,255,.05) !important;
-}
-
-/* TEXTO POSTS */
-
-.tb_post_container *,
-.tb_data_container *{
-
-    color:white !important;
-}
-
-/* BOTONES */
-
-.tb_load_btn,
-.tb_follow_btn{
-
-    background:#ff1493 !important;
-
-    color:white !important;
-
-    border:none !important;
-
-    border-radius:50px !important;
-}
-
-/* QUITAR FONDO CLARO */
-
-iframe{
-
-    background:transparent !important;
-}
 </style>
 
 <!-- ========================= -->
