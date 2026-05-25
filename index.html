@@ -1417,10 +1417,11 @@ const timer = setInterval(function() {
 </section>
 
 <!-- GALERÍA LUNA -->
+<!-- GALERÍA LUNA -->
 
 <section class="galeria-luna">
 
-  <h2>✨ GALERÍA LUNA ✨</h2>
+  <h2>✨ MOMENTOS LUNA ✨</h2>
 
   <div 
     class="taggbox" 
@@ -1439,40 +1440,73 @@ const timer = setInterval(function() {
 <style>
 
 .galeria-luna{
-    background:#000;
-    padding:80px 20px;
+    padding:90px 20px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #1a001f 0%,
+    #2d0036 35%,
+    #120014 100%
+    );
+
     text-align:center;
 }
 
 .galeria-luna h2{
     color:#fff;
+
     font-size:3rem;
-    margin-bottom:40px;
-    letter-spacing:3px;
+
+    margin-bottom:50px;
+
+    letter-spacing:4px;
+
     font-family:Arial,sans-serif;
+
+    text-shadow:
+    0 0 10px rgba(255,20,147,.6),
+    0 0 25px rgba(255,20,147,.3);
 }
 
 .taggbox{
-    border-radius:25px;
+
+    border-radius:30px;
+
     overflow:hidden;
+
     max-width:1400px;
+
     margin:auto;
-    box-shadow:0 0 40px rgba(255,20,147,.25);
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 50px rgba(255,20,147,.18),
+    0 20px 80px rgba(0,0,0,.45);
+
+    padding:10px;
 }
 
 @media(max-width:768px){
 
     .galeria-luna{
-        padding:50px 15px;
+        padding:60px 15px;
     }
 
     .galeria-luna h2{
         font-size:2rem;
+        letter-spacing:2px;
     }
 
 }
 
 </style>
+
 <!-- ========================= -->
 <!-- TESTIMONIOS -->
 <!-- ========================= -->
