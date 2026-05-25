@@ -577,7 +577,6 @@
 <!-- ========================= -->
 <!-- PROXIMO EVENTO LUNA STGO -->
 <!-- ========================= -->
-
 <section id="proximo-evento" class="relative py-28 bg-black text-white overflow-hidden">
 
   <!-- FONDO -->
@@ -631,7 +630,7 @@
               </p>
 
               <h3 class="text-2xl font-bold">
-                Viernes 12 de junio 19:00 bar cabaret piraña.
+                Viernes 12 de Junio · 19:00 hrs
               </h3>
             </div>
 
@@ -646,11 +645,11 @@
 
             <div>
               <p class="text-white/50 uppercase text-sm tracking-widest">
-                Bombero Nuñez 365, Recoleta.
+                Bar Cabaret Piraña
               </p>
 
               <h3 class="text-2xl font-bold">
-                Santiago · Chile
+                Bombero Núñez 365 · Recoleta · Santiago
               </h3>
             </div>
 
@@ -661,10 +660,11 @@
         <!-- COUNTDOWN -->
         <div class="grid grid-cols-4 gap-4 mb-12">
 
+          <!-- DIAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="days" class="text-4xl font-black text-pink-500">
-              20
+              00
             </div>
 
             <p class="text-white/50 text-sm uppercase mt-2">
@@ -673,6 +673,7 @@
 
           </div>
 
+          <!-- HORAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="hours" class="text-4xl font-black text-pink-500">
@@ -685,6 +686,7 @@
 
           </div>
 
+          <!-- MINUTOS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="minutes" class="text-4xl font-black text-pink-500">
@@ -697,6 +699,7 @@
 
           </div>
 
+          <!-- SEGUNDOS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="seconds" class="text-4xl font-black text-pink-500">
@@ -714,6 +717,7 @@
         <!-- BOTON -->
         <a
           href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
+          target="_blank"
           class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-pink-600 hover:bg-pink-500 transition duration-300 text-xl font-bold shadow-2xl hover:scale-105"
         >
           Comprar Entradas 🎟️
@@ -741,6 +745,55 @@
   </div>
 
 </section>
+
+<!-- SCRIPT COUNTDOWN -->
+<script>
+
+  // FECHA EVENTO
+  const eventDate = new Date("June 12, 2026 19:00:00").getTime();
+
+  const countdown = setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = eventDate - now;
+
+    // CALCULOS
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+      (distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+      (distance % (1000 * 60)) / 1000
+    );
+
+    // INSERTAR
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // SI TERMINA
+    if (distance < 0) {
+
+      clearInterval(countdown);
+
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+
+    }
+
+  }, 1000);
+
+</script>
 
 <!---PRÓXIMO EVENTO LLEGAMOS A VIÑA DEL MAR --->
 
