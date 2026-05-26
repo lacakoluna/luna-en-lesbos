@@ -3149,28 +3149,71 @@ function closeGallery(){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luna en Lesbos - Galería Masonry</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<!--GALERIA MASONRY-->
+
+<!-- ===== GALERÍA MASONRY LUNA EN LESBOS ===== -->
+
+<section class="luna-gallery">
+
+    <div class="gallery-header">
+
+        <span class="gallery-tag">
+            🌙 Momentos Luna
+        </span>
+
+        <h2>
+            No era solo una fiesta.<br>
+            Era el espacio que nos faltaba.
+        </h2>
+
+        <p>
+            Ve cómo son nuestros encuentros y la comunidad que ya vive Luna.
+        </p>
+
+    </div>
+
+    <div class="masonry-grid">
+
+        <div class="item tall">
+            <img src="galeria1.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item">
+            <img src="galeria2.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item wide">
+            <img src="galeria3.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item">
+            <img src="galeria4.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item tall">
+            <img src="galeria5.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item">
+            <img src="galeria6.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item wide">
+            <img src="galeria7.jpg" alt="Luna en Lesbos">
+        </div>
+
+        <div class="item">
+            <img src="galeria8.jpg" alt="Luna en Lesbos">
+        </div>
+
+    </div>
+
+</section>
 
 <style>
 
-/* ===== RESET ===== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#050505;
-    font-family:'Montserrat', sans-serif;
-    overflow-x:hidden;
-}
-
-/* ===== GALERÍA ===== */
+/* ===== GALERÍA LUNA ===== */
 
 .luna-gallery{
     background:#050505;
@@ -3182,6 +3225,8 @@ body{
 
 .gallery-header{
     text-align:center;
+    max-width:1000px;
+    margin:auto;
     margin-bottom:70px;
 }
 
@@ -3189,9 +3234,9 @@ body{
     display:inline-block;
     padding:10px 24px;
     border-radius:50px;
-    border:1px solid rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.1);
     background:rgba(255,255,255,0.03);
-    color:#cfa7ff;
+    color:#d7b8ff;
     font-size:14px;
     letter-spacing:1px;
     margin-bottom:25px;
@@ -3200,94 +3245,124 @@ body{
 
 .gallery-header h2{
     color:white;
-    font-size:clamp(2.4rem, 5vw, 5rem);
-    line-height:1.1;
+    font-size:clamp(2.5rem,7vw,5.5rem);
+    line-height:1.05;
     font-weight:800;
     margin-bottom:25px;
 }
 
 .gallery-header p{
-    color:#b8b8b8;
+    color:#bdbdbd;
     font-size:18px;
     line-height:1.7;
     max-width:700px;
     margin:auto;
 }
 
-/* ===== MASONRY ===== */
+/* ===== GRID ===== */
 
-.masonry-gallery{
-    column-count:4;
-    column-gap:18px;
+.masonry-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
     max-width:1500px;
     margin:auto;
 }
 
-.gallery-item{
+/* ===== ITEMS ===== */
+
+.item{
     position:relative;
     overflow:hidden;
-    border-radius:24px;
-    margin-bottom:18px;
-    break-inside:avoid;
-    cursor:pointer;
+    border-radius:28px;
     background:#111;
+    min-height:320px;
+    cursor:pointer;
 }
 
-.gallery-item img{
+/* ===== IMÁGENES ===== */
+
+.item img{
     width:100%;
+    height:100%;
+    object-fit:cover;
     display:block;
-    border-radius:24px;
     transition:0.6s ease;
 }
 
-/* Hover Zoom */
+/* ===== TAMAÑOS ===== */
 
-.gallery-item:hover img{
-    transform:scale(1.05);
-    filter:brightness(1.08);
+.tall{
+    grid-row:span 2;
+    min-height:650px;
 }
 
-/* Overlay Glow */
+.wide{
+    grid-column:span 2;
+}
 
-.gallery-item::after{
+/* ===== HOVER ===== */
+
+.item:hover img{
+    transform:scale(1.05);
+    filter:brightness(1.05);
+}
+
+.item::after{
     content:'';
     position:absolute;
     inset:0;
     background:linear-gradient(
         to top,
-        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.5),
         transparent
     );
     opacity:0;
     transition:0.4s;
 }
 
-.gallery-item:hover::after{
+.item:hover::after{
     opacity:1;
 }
 
-/* Glow effect */
-
-.gallery-item:hover{
+.item:hover{
     box-shadow:
-    0 0 25px rgba(178,111,255,0.25),
-    0 0 60px rgba(178,111,255,0.15);
+    0 0 30px rgba(183,111,255,0.25),
+    0 0 60px rgba(183,111,255,0.12);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== TABLET ===== */
 
 @media(max-width:1100px){
 
-    .masonry-gallery{
-        column-count:3;
+    .masonry-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
-@media(max-width:768px){
+/* ===== MOBILE ===== */
 
-    .masonry-gallery{
-        column-count:2;
+@media(max-width:700px){
+
+    .masonry-grid{
+        grid-template-columns:1fr;
+    }
+
+    .wide{
+        grid-column:span 1;
+    }
+
+    .tall{
+        min-height:420px;
+    }
+
+    .gallery-header h2{
+        font-size:2.6rem;
+    }
+
+    .gallery-header p{
+        font-size:16px;
     }
 
     .luna-gallery{
@@ -3296,87 +3371,7 @@ body{
 
 }
 
-@media(max-width:500px){
-
-    .masonry-gallery{
-        column-count:1;
-    }
-
-    .gallery-header h2{
-        font-size:2.3rem;
-    }
-
-    .gallery-header p{
-        font-size:16px;
-    }
-
-}
-
 </style>
-</head>
-
-<body>
-
-<section class="luna-gallery">
-
-    <div class="gallery-header">
-
-        <span class="gallery-tag">
-            🌙 Momentos Luna
-        </span>
-
-        <h2>
-            No era solo una junta de mujeres.<br>
-            Era el espacio que nos faltaba.
-        </h2>
-
-        <p>
-            Ve como son nuestros recuerdos fotos de los eventos.
-        </p>
-
-    </div>
-
-    <div class="masonry-gallery">
-
-        <div class="gallery-item">
-            <img src="galeria1.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria2.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria3.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria4.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria5.jpg" alt=""
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria6.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria7.jpg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="galeria8.jpg" alt="">
-        </div>
-
-    </div>
-
-</section>
-
-</body>
-</html>
-
 
 
 
