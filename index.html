@@ -1,20 +1,1182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luna en Lesbos</title>
 
-<title>Luna en Lesbos 🌙</title>
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- TAILWIND -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- FUENTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+    body{
+      font-family: 'Inter', sans-serif;
+      background: black;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    /* CARRUSEL */
+
+    @keyframes scroll {
+      0%{
+        transform: translateX(0);
+      }
+
+      100%{
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-scroll{
+      animation: scroll 35s linear infinite;
+    }
+
+    .animate-scroll:hover{
+      animation-play-state: paused;
+    }
+
+  </style>
+
+</head>
+<!-- ========================= -->
+<!-- BOTON FLOTANTE WHATSAPP -->
+<!-- ========================= -->
+
+<a
+  href="https://wa.me/56940019956"
+  target="_blank"
+  class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white px-5 py-4 rounded-full shadow-2xl hover:scale-105 transition duration-300 animate-bounce"
+>
+
+  <!-- ICONO -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    class="w-7 h-7 fill-white"
+  >
+    <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.82.736 5.57 2.136 7.996L0 32l7.84-2.056a15.94 15.94 0 0 0 8.16 2.252c8.836 0 16-7.164 16-16S24.836.396 16 .396zm0 29.09a13.02 13.02 0 0 1-6.63-1.81l-.474-.28-4.65 1.22 1.24-4.53-.308-.466A13.004 13.004 0 0 1 2.91 16.4c0-7.214 5.876-13.09 13.09-13.09 7.214 0 13.09 5.876 13.09 13.09 0 7.214-5.876 13.09-13.09 13.09zm7.186-9.822c-.394-.198-2.33-1.15-2.692-1.282-.362-.132-.626-.198-.89.198-.264.396-1.022 1.282-1.254 1.546-.23.264-.46.297-.856.1-.394-.198-1.666-.614-3.174-1.956-1.174-1.046-1.966-2.338-2.198-2.734-.23-.396-.024-.61.174-.808.178-.176.396-.462.594-.694.198-.23.264-.396.396-.66.132-.264.066-.496-.032-.694-.1-.198-.89-2.144-1.22-2.936-.322-.774-.65-.67-.89-.682l-.758-.014c-.264 0-.694.1-1.056.496-.362.396-1.386 1.354-1.386 3.3 0 1.946 1.418 3.826 1.616 4.09.198.264 2.79 4.26 6.762 5.972.946.408 1.684.652 2.258.834.948.302 1.812.26 2.494.158.76-.114 2.33-.952 2.658-1.87.33-.918.33-1.704.23-1.87-.098-.166-.362-.264-.756-.462z"/>
+  </svg>
+
+  <!-- TEXTO -->
+  <div class="hidden md:block leading-tight">
+
+    <span class="block text-sm font-bold">
+      ¿Tienes dudas?
+    </span>
+
+    <span class="block text-xs opacity-90">
+      Escríbenos por WhatsApp
+    </span>
+
+  </div>
+
+</a>
+<body class="min-h-screen bg-black text-white overflow-x-hidden">
+
+  <!-- BOTÓN FLOTANTE COMPRAR ENTRADAS -->
+<a href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026" 
+   class="btn-floating-ticket" 
+   target="_blank">
+   🎟️ COMPRAR ENTRADAS
+</a>
+
+<style>
+.btn-floating-ticket{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg,#ff2d75,#ff5ca8);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    animation: pulse 1.8s infinite;
+    transition: all .3s ease;
+}
+
+.btn-floating-ticket:hover{
+    transform: translateX(-50%) scale(1.05);
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,45,117,.7);
+    }
+    70%{
+        box-shadow: 0 0 0 18px rgba(255,45,117,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,45,117,0);
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .btn-floating-ticket{
+        width: 90%;
+        text-align: center;
+        font-size: 18px;
+        padding: 18px 20px;
+        bottom: 15px;
+    }
+}
+</style>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-fuchsia-500/10">
+
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-4">
+
+      <img 
+        src="lunal.png"
+        alt="Luna en Lesbos"
+        class="h-14 w-auto"
+      >
+
+      <h1 class="text-2xl font-black text-fuchsia-300">
+        Luna en Lesbos
+      </h1>
+
+    </div>
+
+    <!-- MENU -->
+    <nav class="hidden md:flex gap-8 text-sm text-gray-300">
+
+      <a href="#quienes" class="hover:text-fuchsia-300 transition">
+        Quienes Somos
+      </a>
+
+       <a href="#que-es" class="hover:text-fuchsia-300 transition">
+        ¿Qué es Luna en Lesbos?
+      </a>
+
+      <a href="#eventos" class="hover:text-fuchsia-300 transition">
+        Eventos
+      </a>
+
+      <a href="#galeria" class="hover:text-fuchsia-300 transition">
+        Galería
+      </a>
+
+      <a href="#contacto" class="hover:text-fuchsia-300 transition">
+        Contacto
+      </a>
+
+    </nav>
+
+    <!-- REDES -->
+    <div class="flex items-center gap-4">
+
+      <!-- INSTAGRAM -->
+      <a
+        href="https://www.instagram.com/lunaenlesbos/"
+        target="_blank"
+        class="w-11 h-11 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+        </svg>
+
+      </a>
+
+      <!-- FACEBOOK -->
+      <a
+        href="https://www.facebook.com/profile.php?id=61564150917080"
+        target="_blank"
+        class="w-11 h-11 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 22v-9h3l1-4h-4V7c0-1.2.3-2 2-2h2V1.5c-.4-.1-1.8-.2-3.3-.2-3.3 0-5.7 2-5.7 5.8V9H5v4h3v9h5z"/>
+        </svg>
+
+      </a>
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://wa.me/+56940019956"
+        target="_blank"
+        class="w-11 h-11 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.77 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.16-3.47-8.43zM12.08 21.8h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.74.98 1-3.64-.24-.38a9.86 9.86 0 0 1-1.52-5.25c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.46-4.44 9.9-9.87 9.9zm5.43-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.03-1.05 2.52s1.08 2.93 1.23 3.13c.15.2 2.12 3.24 5.13 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+        </svg>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- HERO -->
+
+<!-- HERO VIDEO LUNA -->
+
+<style>
+
+.hero-video{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background:black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-video video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:1;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:2;
+}
+
+.hero-gradient{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.5),
+    rgba(40,0,40,0.3),
+    rgba(0,0,0,0.8)
+  );
+  z-index:3;
+}
+
+.hero-content{
+  position:relative;
+  z-index:4;
+  padding:20px;
+  max-width:900px;
+}
+
+.hero-content h1{
+  color:white;
+  font-size:6rem;
+  font-weight:900;
+  margin-bottom:20px;
+  letter-spacing:4px;
+}
+
+.hero-content p{
+  color:#ddd;
+  font-size:1.4rem;
+  margin-bottom:35px;
+}
+
+.hero-button{
+  display:inline-block;
+  padding:16px 34px;
+  background:#c026d3;
+  color:white;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.1rem;
+  transition:0.3s;
+}
+
+.hero-button:hover{
+  background:#e879f9;
+  transform:scale(1.05);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero-content h1{
+    font-size:3rem;
+    line-height:1;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+  }
+
+}
+
+</style>
+
+
+
+<section class="hero-video">
+
+  <!-- VIDEO -->
+  <video autoplay muted loop playsinline>
+    <source src="luna10980.mp4" type="video/mp4">
+  </video>
+
+  <!-- CAPAS -->
+  <div class="hero-overlay"></div>
+  <div class="hero-gradient"></div>
+
+  <!-- CONTENIDO -->
+  <div class="hero-content">
+
+    <p>
+      Comunidad • Mujeres • Experiencia
+    </p>
+
+    <h1>
+      LUNA EN LESBOS
+    </h1>
+
+
+    <a
+      class="hero-button"
+      href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
+      target="_blank"
+    >
+      Comprar Entradas 🎟️
+    </a>
+
+
+</section>
+
+<!-- CARRUSEL -->
+<section class="relative py-12 overflow-hidden bg-black">
+
+  <!-- DIFUMINADO IZQUIERDA -->
+  <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
+
+  <!-- DIFUMINADO DERECHA -->
+  <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
+
+  <div class="flex gap-6 animate-scroll w-max">
+
+    <!-- FOTO -->
+    <img src="foto1.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto2.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto3.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto4.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <!-- DUPLICADAS -->
+    <img src="foto1.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto2.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto3.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+    <img src="foto4.jpg" class="h-80 w-[520px] object-cover rounded-3xl border border-fuchsia-500/20 shadow-2xl">
+
+  </div>
+
+</section>
+
+
+<!-- CONTADOR FOMO -->
+<section class="py-16 bg-[#0a0a0a] border-y border-pink-500/20">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+
+      <!-- ITEM -->
+      <div class="bg-[#111] rounded-3xl p-8 border border-pink-500/20">
+
+        <h3 id="contadorPersonas"
+          class="text-5xl font-black text-pink-500 mb-3">
+          +500
+        </h3>
+
+        <p class="text-white/80 text-lg">
+          mujeres ya vivieron Luna
+        </p>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="bg-[#111] rounded-3xl p-8 border border-pink-500/20">
+
+        <h3 id="contadorDias"
+          class="text-5xl font-black text-white mb-3">
+          POCOS DÍAS
+        </h3>
+
+        <p class="text-white/80 text-lg">
+          para el próximo evento
+        </p>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="bg-[#111] rounded-3xl p-8 border border-pink-500/20">
+
+        <h3 id="contadorEntradas"
+          class="text-5xl font-black text-red-500 mb-3">
+          PREVENTA 
+        </h3>
+
+        <p class="text-white/80 text-lg">
+          DESPUÉS SE AGOTAN
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- STATS -->
+<section class="py-28 px-6 bg-gradient-to-b from-black to-fuchsia-950/20 border-y border-fuchsia-500/10">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-center">
+
+    <!-- ITEM -->
+    <div class="bg-white/5 border border-fuchsia-500/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-fuchsia-400/40 transition">
+
+      <div class="text-6xl mb-6">
+        ✨
+      </div>
+
+      <h3 class="text-5xl font-black mb-4 text-white">
+
+        +2 años
+
+      </h3>
+
+      <p class="text-2xl font-bold mb-4 text-fuchsia-300">
+
+        creando comunidad
+
+      </p>
+
+      <p class="text-gray-400 text-lg leading-relaxed">
+
+        Generando espacios seguros, reales y auténticos
+        para mujeres lesbianas en Chile.
+
+      </p>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="bg-white/5 border border-fuchsia-500/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-fuchsia-400/40 transition">
+
+      <div class="text-6xl mb-6">
+        💜
+      </div>
+
+      <h3 class="text-5xl font-black mb-4 text-white">
+
+        +500
+
+      </h3>
+
+      <p class="text-2xl font-bold mb-4 text-fuchsia-300">
+
+        mujeres han vivido Luna
+
+      </p>
+
+      <p class="text-gray-400 text-lg leading-relaxed">
+
+        Eventos, juntas, fiestas y experiencias
+        donde nacen conexiones reales.
+
+      </p>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="bg-white/5 border border-fuchsia-500/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-fuchsia-400/40 transition">
+
+      <div class="text-6xl mb-6">
+        🎤
+      </div>
+
+      <h3 class="text-4xl font-black mb-4 text-white leading-tight">
+
+        Recorremos
+        bares de Chile
+
+      </h3>
+
+      <p class="text-2xl font-bold mb-4 text-fuchsia-300">
+
+        cultura y diversión
+
+      </p>
+
+      <p class="text-gray-400 text-lg leading-relaxed">
+
+        Cada encuentro mezcla humor,
+        arte, conversación y comunidad.
+
+      </p>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="bg-white/5 border border-fuchsia-500/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-fuchsia-400/40 transition">
+
+      <div class="text-6xl mb-6">
+        🌈
+      </div>
+
+      <h3 class="text-5xl font-black mb-4 text-white">
+
+        Espacios seguros
+
+      </h3>
+
+      <p class="text-2xl font-bold mb-4 text-fuchsia-300">
+
+        hechos para mujeres
+
+      </p>
+
+      <p class="text-gray-400 text-lg leading-relaxed">
+
+        Un lugar donde puedes ser tú misma,
+        conocer gente y sentirte libre.
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+
+<!-- QUIENES SOMOS -->
+<section id="quienes" class="max-w-7xl mx-auto py-32 px-6">
+
+  <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+    <!-- FOTO -->
+    <div class="relative">
+
+      <img
+        src="foto2.jpg"
+        alt="Comunidad Luna en Lesbos"
+        class="w-full h-[650px] object-cover rounded-[40px] border border-fuchsia-500/20 shadow-2xl"
+      >
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 rounded-[40px] bg-gradient-to-t from-black/40 to-transparent"></div>
+
+    </div>
+
+    <!-- TEXTO -->
+    <div class="max-w-2xl">
+
+      <!-- TITULO PEQUEÑO -->
+      <p class="uppercase tracking-[8px] text-fuchsia-300 text-sm mb-6">
+
+        QUIENES SOMOS
+
+      </p>
+
+      <!-- TITULO -->
+      <h2 class="text-5xl md:text-7xl font-black leading-[0.95] mb-8">
+
+        Creamos espacios
+        reales y seguros.
+
+      </h2>
+
+      <!-- SUBTITULO -->
+      <h3 class="text-2xl md:text-4xl font-bold text-white mb-8 leading-tight">
+
+        Más que una JUNTA.<br>
+        Una comunidad real.
+
+      </h3>
+
+      <!-- TEXTO -->
+      <p class="text-xl text-gray-300 leading-relaxed mb-6">
+
+        Luna en Lesbos nace como un espacio creado por y para mujeres lesbianas
+        y personas queer que buscan conectar desde la autenticidad,
+        la libertad y la comunidad.
+
+      </p>
+
+      <p class="text-lg text-gray-400 leading-relaxed mb-10">
+
+        Creamos experiencias donde la música, la comedia,
+        el arte y la conversación se encuentran en un mismo lugar,
+        generando conexiones reales y momentos inolvidables.
+
+      </p>
+
+      <!-- LISTA -->
+      <div class="space-y-5 mb-12">
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Libertad de expresión
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Humor y conexión real
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+          <div class="w-3 h-3 rounded-full bg-fuchsia-400"></div>
+
+          <p class="text-lg text-gray-300">
+            Visibilidad lésbica y espacios seguros
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- BOTON -->
+      <a 
+  href="https://www.instagram.com/lunaenlesbos/" 
+  target="_blank"
+  class="inline-block bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-fuchsia-500/30"
+>
+
+  Únete a la comunidad
+
+</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+LUNA EXPERIENCE SECTION
+PEGA TODO ESTO EN TU INDEX.HTML
+========================================= -->
+
+<section class="luna-experience">
+
+  <!-- GLOW BACKGROUND -->
+  <div class="luna-glow glow-1"></div>
+  <div class="luna-glow glow-2"></div>
+
+  <!-- HERO -->
+
+  <div class="luna-hero">
+
+    <div class="luna-left">
+
+      <span class="mini-text">LO QUE PASA EN</span>
+
+      <h1>LUNA</h1>
+
+      <h2>se queda en Luna.</h2>
+
+      <p>
+        No es solo un evento.<br>
+        Es una comunidad que se elige, se cuida y se vuelve hogar.
+      </p>
+
+      <a href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026" target="_blank" class="hero-btn">
+        QUIERO VIVIR LUNA 🌙
+      </a>
+
+    </div>
+
+    <div class="luna-right">
+
+      <!-- FOTO PRINCIPAL -->
+      <!-- CAMBIA LA URL POR TU FOTO -->
+
+      <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop" alt="Luna Community">
+
+      <div class="floating-badge">
+        CREADO POR<br>
+        Y PARA<br>
+        <span>lesbianas ♡</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE GRID -->
+
+  <div class="experience-wrapper">
+
+    <h2 class="section-title">Lo que pasa en Luna ✨</h2>
+
+    <div class="experience-grid">
+
+      <div class="exp-card">
+        <div class="icon">💜</div>
+
+        <div>
+          <h3>Mujeres que llegan solas</h3>
+          <p>y terminan haciendo amigas.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="icon">🌙</div>
+
+        <div>
+          <h3>Historias que comienzan</h3>
+          <p>en una noche de Luna.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="icon">🎤</div>
+
+        <div>
+          <h3>Stand-up, música</h3>
+          <p>conversaciones y libertad.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="icon">🫂</div>
+
+        <div>
+          <h3>Un espacio seguro</h3>
+          <p>donde nadie se siente fuera de lugar.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="icon">🔥</div>
+
+        <div>
+          <h3>Energía real</h3>
+          <p>sin máscaras ni pretensiones.</p>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="icon">✨</div>
+
+        <div>
+          <h3>Una comunidad</h3>
+          <p>creciendo en todo Chile.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TESTIMONIOS -->
+
+  <div class="testimonials">
+
+    <h2>Ellas ya vivieron Luna 💜</h2>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+        <div>
+          <p>
+            “Fui sola y terminé con amigas nuevas.”
+          </p>
+
+          <span>— Camila</span>
+        </div>
+
+      </div>
+
+      <div class="testimonial">
+
+        <img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+        <div>
+          <p>
+            “Nunca había sentido un espacio tan seguro.”
+          </p>
+
+          <span>— Vale</span>
+        </div>
+
+      </div>
+
+      <div class="testimonial">
+
+        <img src="https://randomuser.me/api/portraits/women/33.jpg">
+
+        <div>
+          <p>
+            “Luna me hizo sentir parte de algo.”
+          </p>
+
+          <span>— Anto</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+<!-- =========================
+TIMELINE LUNA
+PEGA TODO ESTO EN TU HTML
+========================= -->
+
+<section class="luna-timeline-section">
+
+  <div class="timeline-box">
+
+    <h2>Así nació Luna ✨</h2>
+
+    <!-- LINE -->
+
+    <div class="timeline-line">
+
+      <!-- ITEM 1 -->
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>2023</h3>
+
+          <p>
+            Nace la idea de crear<br>
+            un espacio distinto.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM 2 -->
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>2024</h3>
+
+          <p>
+            Primera edición.<br>
+            70 mujeres.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ITEM 3 -->
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>Hoy</h3>
+
+          <p>
+            Una comunidad<br>
+            creciendo en todo Chile.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FINAL DOT -->
+
+      <div class="timeline-final-dot"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =========================
+TIMELINE SECTION
+========================= */
+
+body{
+  margin:0;
+  background:black;
+  font-family:Arial, sans-serif;
+}
+
+.luna-timeline-section{
+  padding:80px 20px;
+  background:#000;
+}
+
+.timeline-box{
+
+  max-width:1400px;
+  margin:auto;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(168,85,247,.18),
+  transparent 40%),
+
+  linear-gradient(
+    180deg,
+    #0c0215,
+    #050505
+  );
+
+  border:1px solid rgba(168,85,247,.25);
+
+  border-radius:35px;
+
+  padding:70px 60px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 0 60px rgba(168,85,247,.08);
+
+}
+
+/* TITLE */
+
+.timeline-box h2{
+  color:white;
+  font-size:58px;
+  margin-bottom:90px;
+  font-weight:700;
+}
+
+/* LINE */
+
+.timeline-line{
+
+  position:relative;
+
+  display:flex;
+  justify-content:space-between;
+
+  gap:40px;
+
+}
+
+/* MAIN LINE */
+
+.timeline-line::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:18px;
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:
+  linear-gradient(
+    to right,
+    #ff7bff,
+    #d946ef
+  );
+
+  box-shadow:
+  0 0 25px #d946ef;
+
+}
+
+/* ITEM */
+
+.timeline-item{
+  position:relative;
+  width:100%;
+}
+
+/* DOT */
+
+.timeline-dot{
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:white;
+
+  border:8px solid #d946ef;
+
+  box-shadow:
+  0 0 25px #d946ef,
+  0 0 60px rgba(217,70,239,.8);
+
+  position:relative;
+  z-index:2;
+}
+
+/* FINAL BIG DOT */
+
+.timeline-final-dot{
+
+  width:34px;
+  height:34px;
+
+  border-radius:50%;
+
+  background:white;
+
+  border:10px solid #d946ef;
+
+  box-shadow:
+  0 0 40px #d946ef,
+  0 0 80px rgba(217,70,239,.9);
+
+  position:absolute;
+
+  right:-5px;
+  top:3px;
+
+  z-index:3;
+}
+
+/* CONTENT */
+
+.timeline-content{
+  margin-top:50px;
+}
+
+.timeline-content h3{
+
+  color:#ff7bff;
+
+  font-size:52px;
+
+  margin-bottom:18px;
+}
+
+.timeline-content p{
+
+  color:white;
+
+  font-size:30px;
+
+  line-height:1.5;
+
+  opacity:.92;
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+  .timeline-box{
+    padding:50px 30px;
+  }
+
+  .timeline-box h2{
+    font-size:38px;
+    margin-bottom:60px;
+  }
+
+  .timeline-line{
+    flex-direction:column;
+    gap:70px;
+  }
+
+  .timeline-line::before{
+
+    width:4px;
+    height:100%;
+
+    left:9px;
+    top:0;
+  }
+
+  .timeline-final-dot{
+    left:-6px;
+    right:auto;
+    bottom:0;
+    top:auto;
+  }
+
+  .timeline-content{
+    margin-left:50px;
+    margin-top:-20px;
+  }
+
+  .timeline-content h3{
+    font-size:40px;
+  }
+
+  .timeline-content p{
+    font-size:22px;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+</section>
 
 <style>
 
@@ -22,575 +1184,519 @@
 GLOBAL
 ========================= */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
 body{
-  font-family:'Inter',sans-serif;
+  margin:0;
+  background:#000;
+  font-family: Arial, sans-serif;
+}
+
+.luna-experience{
   background:#000;
   color:white;
-  overflow-x:hidden;
+  position:relative;
+  overflow:hidden;
+  padding:100px 20px;
 }
 
-/* =========================
-SCROLLBAR
-========================= */
+/* GLOW */
 
-::-webkit-scrollbar{
-  width:10px;
+.luna-glow{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  filter:blur(140px);
+  opacity:.22;
 }
 
-::-webkit-scrollbar-track{
-  background:#000;
+.glow-1{
+  background:#a855f7;
+  top:-150px;
+  left:-100px;
 }
 
-::-webkit-scrollbar-thumb{
-  background:#c026d3;
-  border-radius:50px;
+.glow-2{
+  background:#ff3cac;
+  bottom:-200px;
+  right:-100px;
 }
 
-/* =========================
-HEADER
-========================= */
+/* HERO */
 
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:999;
-  backdrop-filter:blur(20px);
-  background:rgba(0,0,0,.45);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.nav-container{
+.luna-hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
   max-width:1400px;
   margin:auto;
-  padding:18px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo img{
-  height:58px;
-}
-
-.logo h1{
-  font-size:28px;
-  font-weight:900;
-  color:#f0abfc;
-}
-
-nav{
-  display:flex;
-  gap:40px;
-}
-
-nav a{
-  color:#ddd;
-  text-decoration:none;
-  font-size:15px;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:#f0abfc;
-}
-
-/* =========================
-HERO
-========================= */
-
-.hero{
-  position:relative;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.55);
-}
-
-.hero-gradient{
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(
-    to bottom,
-    rgba(0,0,0,.4),
-    rgba(40,0,40,.2),
-    rgba(0,0,0,.95)
-  );
-}
-
-.hero-content{
-  position:relative;
-  z-index:10;
-  max-width:1000px;
-  padding:20px;
-}
-
-.hero-content p{
-  color:#ddd;
-  font-size:22px;
-  margin-bottom:25px;
-  letter-spacing:3px;
-}
-
-.hero-content h2{
-  font-size:110px;
-  font-weight:900;
-  line-height:.9;
-  margin-bottom:35px;
-  background:linear-gradient(to right,#fff,#f0abfc);
+.luna-left h1{
+  font-size:120px;
+  margin:0;
+  line-height:1;
+  background:linear-gradient(to right,#fff,#d946ef);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-.hero-buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+.luna-left h2{
+  font-size:55px;
+  margin-top:10px;
+  color:#ff9ff3;
+  font-style:italic;
+  font-weight:300;
+}
+
+.luna-left p{
+  font-size:22px;
+  color:#ddd;
+  line-height:1.8;
+  margin:35px 0;
+}
+
+.mini-text{
+  letter-spacing:4px;
+  color:#c084fc;
 }
 
 .hero-btn{
   display:inline-block;
-  padding:18px 38px;
-  border-radius:999px;
+  padding:18px 42px;
+  border-radius:60px;
+  background:linear-gradient(to right,#d946ef,#9333ea);
+  color:white;
   text-decoration:none;
-  font-weight:700;
-  transition:.3s;
+  font-weight:bold;
+  transition:.4s;
 }
 
-.btn-primary{
-  background:#c026d3;
-  color:white;
-}
-
-.btn-primary:hover{
-  background:#e879f9;
+.hero-btn:hover{
   transform:scale(1.05);
+  box-shadow:0 0 35px rgba(217,70,239,.5);
 }
 
-.btn-secondary{
-  border:1px solid rgba(255,255,255,.2);
-  color:white;
-  backdrop-filter:blur(10px);
+/* IMAGE */
+
+.luna-right{
+  position:relative;
 }
 
-.btn-secondary:hover{
-  background:rgba(255,255,255,.08);
-  transform:scale(1.05);
+.luna-right img{
+  width:100%;
+  height:700px;
+  object-fit:cover;
+  border-radius:30px;
+  opacity:.92;
 }
 
-/* =========================
-WHATSAPP FLOAT
-========================= */
+.floating-badge{
+  position:absolute;
+  right:30px;
+  bottom:30px;
 
-.whatsapp{
-  position:fixed;
-  right:25px;
-  bottom:110px;
-  z-index:999;
-  width:70px;
-  height:70px;
+  width:220px;
+  height:220px;
+
   border-radius:50%;
-  background:#25D366;
+
+  background:rgba(0,0,0,.5);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,.2);
+
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
-  animation:pulse 2s infinite;
+  flex-direction:column;
+
+  text-align:center;
+
+  font-size:20px;
+
+  box-shadow:0 0 35px rgba(217,70,239,.35);
 }
 
-.whatsapp img{
-  width:36px;
+.floating-badge span{
+  color:#ff9ff3;
+  font-size:30px;
+  font-style:italic;
 }
 
-@keyframes pulse{
-  0%{
-    transform:scale(1);
-  }
+/* SECTION TITLE */
 
-  50%{
-    transform:scale(1.08);
-  }
-
-  100%{
-    transform:scale(1);
-  }
+.section-title{
+  text-align:center;
+  font-size:60px;
+  margin-top:140px;
+  margin-bottom:60px;
 }
 
-/* =========================
-STICKY BUTTON
-========================= */
+/* EXPERIENCE */
 
-.ticket-btn{
-  position:fixed;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:999;
-  background:linear-gradient(90deg,#ff2d75,#ff5ca8);
-  color:white;
-  text-decoration:none;
-  padding:18px 35px;
-  border-radius:999px;
-  font-weight:800;
-  box-shadow:0 10px 40px rgba(255,0,120,.4);
-  animation:pulseTicket 2s infinite;
-}
-
-@keyframes pulseTicket{
-  0%{
-    box-shadow:0 0 0 0 rgba(255,0,120,.7);
-  }
-
-  70%{
-    box-shadow:0 0 0 20px rgba(255,0,120,0);
-  }
-
-  100%{
-    box-shadow:0 0 0 0 rgba(255,0,120,0);
-  }
-}
-
-/* =========================
-SECTION GENERAL
-========================= */
-
-.section{
-  padding:120px 30px;
-}
-
-.container{
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
   max-width:1400px;
   margin:auto;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:80px;
+.exp-card{
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:28px;
+
+  padding:35px;
+
+  display:flex;
+  gap:20px;
+
+  align-items:flex-start;
+
+  transition:.4s;
+
+  backdrop-filter:blur(12px);
 }
 
-.section-title span{
-  color:#f472b6;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  font-size:14px;
+.exp-card:hover{
+  transform:translateY(-8px);
+  border-color:#d946ef;
+  box-shadow:0 0 30px rgba(217,70,239,.2);
 }
 
-.section-title h2{
-  font-size:70px;
-  font-weight:900;
-  margin-top:20px;
-}
+.icon{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:rgba(217,70,239,.15);
 
-.section-title p{
-  color:#aaa;
-  max-width:700px;
-  margin:20px auto 0;
-  line-height:1.8;
-}
-
-/* =========================
-QUE ES LUNA
-========================= */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
+  display:flex;
   align-items:center;
+  justify-content:center;
+
+  font-size:30px;
 }
 
-.about-image img{
-  width:100%;
-  height:700px;
-  object-fit:cover;
-  border-radius:40px;
+.exp-card h3{
+  margin:0;
+  font-size:28px;
 }
 
-.about-content h3{
-  font-size:70px;
-  line-height:1;
-  margin-bottom:30px;
+.exp-card p{
+  margin-top:10px;
+  color:#ffb8ff;
+  font-size:22px;
+  font-style:italic;
 }
 
-.about-content p{
-  color:#ccc;
-  font-size:21px;
-  line-height:1.8;
-  margin-bottom:25px;
+/* TESTIMONIALS */
+
+.testimonials{
+  max-width:1200px;
+  margin:120px auto;
 }
 
-.about-list{
-  margin-top:40px;
+.testimonials h2{
+  text-align:center;
+  font-size:55px;
+  margin-bottom:50px;
 }
 
-.about-list li{
-  list-style:none;
-  margin-bottom:20px;
-  font-size:20px;
-  color:#f0abfc;
-}
-
-/* =========================
-CARDS
-========================= */
-
-.cards{
+.testimonial-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:30px;
 }
 
-.card{
+.testimonial{
+  display:flex;
+  gap:25px;
+
+  align-items:center;
+
   background:rgba(255,255,255,.04);
+
   border:1px solid rgba(255,255,255,.08);
-  border-radius:35px;
-  padding:40px;
-  transition:.4s;
-  backdrop-filter:blur(15px);
+
+  border-radius:25px;
+
+  padding:25px;
 }
 
-.card:hover{
-  transform:translateY(-10px);
-  border-color:#d946ef;
-  box-shadow:0 0 40px rgba(217,70,239,.2);
+.testimonial img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
-.card h3{
-  font-size:32px;
-  margin-bottom:15px;
+.testimonial p{
+  font-size:24px;
+  line-height:1.6;
 }
 
-.card p{
-  color:#bbb;
-  line-height:1.7;
+.testimonial span{
+  color:#ff9ff3;
 }
 
-/* =========================
-GALLERY
-========================= */
+/* STATS */
 
-.gallery{
+.stats-section{
+  max-width:1400px;
+  margin:140px auto 0;
+}
+
+.stats-section h2{
+  text-align:center;
+  font-size:55px;
+  margin-bottom:60px;
+}
+
+.stats-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
 
-.gallery img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
+.stat-box{
+  background:linear-gradient(
+    135deg,
+    rgba(168,85,247,.12),
+    rgba(255,60,172,.08)
+  );
+
   border-radius:30px;
-  transition:.4s;
-}
 
-.gallery img:hover{
-  transform:scale(1.03);
-}
+  padding:45px 30px;
 
-/* =========================
-FAQ
-========================= */
-
-.faq{
-  max-width:1000px;
-  margin:auto;
-}
-
-details{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:25px;
-  padding:25px;
-  margin-bottom:20px;
-}
-
-summary{
-  cursor:pointer;
-  font-size:22px;
-  font-weight:700;
-}
-
-details p{
-  margin-top:20px;
-  color:#bbb;
-  line-height:1.8;
-}
-
-/* =========================
-FOOTER
-========================= */
-
-footer{
-  padding:80px 30px;
-  border-top:1px solid rgba(255,255,255,.06);
   text-align:center;
+
+  border:1px solid rgba(255,255,255,.08);
 }
 
-footer h3{
-  font-size:40px;
-  margin-bottom:20px;
+.stat-box h3{
+  font-size:60px;
+  color:#ff9ff3;
+  margin:0;
 }
 
-footer p{
-  color:#999;
+.stat-box p{
+  color:#ddd;
+  margin-top:15px;
+  font-size:20px;
+  line-height:1.5;
 }
 
-/* =========================
-MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:980px){
 
-  nav{
-    display:none;
-  }
-
-  .hero-content h2{
-    font-size:60px;
-  }
-
-  .hero-content p{
-    font-size:16px;
-  }
-
-  .section-title h2{
-    font-size:42px;
-  }
-
-  .about-grid{
+  .luna-hero{
     grid-template-columns:1fr;
   }
 
-  .about-content h3{
-    font-size:48px;
+  .luna-left h1{
+    font-size:80px;
   }
 
-  .about-image img{
+  .luna-left h2{
+    font-size:38px;
+  }
+
+  .section-title,
+  .testimonials h2,
+  .stats-section h2{
+    font-size:38px;
+  }
+
+  .luna-right img{
     height:500px;
-  }
-
-  .ticket-btn{
-    width:90%;
-    text-align:center;
-  }
-
-  body{
-    padding-bottom:120px;
   }
 
 }
 
 </style>
 
-</head>
+<!-- ========================= -->
+<!-- PROXIMO EVENTO LUNA STGO -->
+<!-- ========================= -->
+ <!-- ========================= -->
+<!-- EVENTO SANTIAGO -->
+<!-- ========================= -->
 
-<body>
+<section id="proximo-evento-stgo" class="relative py-28 bg-black text-white overflow-hidden">
 
-<!-- HEADER -->
+  <!-- FONDO -->
+  <div class="absolute inset-0">
 
-<header>
+    <img
+      src="12junio.jpg"
+      alt="Luna en Lesbos"
+      class="w-full h-full object-cover opacity-20"
+    >
 
-  <div class="nav-container">
+    <div class="absolute inset-0 bg-black/70"></div>
 
-    <div class="logo">
-
-      <img src="lunal.png">
-
-      <h1>Luna en Lesbos</h1>
-
-    </div>
-
-    <nav>
-
-      <a href="#que-es">¿Qué es Luna?</a>
-
-      <a href="#experiencias">Experiencias</a>
-
-      <a href="#galeria">Galería</a>
-
-      <a href="#faq">FAQ</a>
-
-      <a href="#contacto">Contacto</a>
-
-    </nav>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black"></div>
 
   </div>
 
-</header>
+  <!-- CONTENIDO -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
 
-<!-- HERO -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-<section class="hero">
+      <!-- IZQUIERDA -->
+      <div>
 
-  <video autoplay muted loop playsinline>
-    <source src="luna10980.mp4" type="video/mp4">
-  </video>
+        <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+          Próximo evento
+        </span>
 
-  <div class="hero-overlay"></div>
+        <h2 class="text-6xl md:text-7xl font-black leading-none mt-6 mb-8">
+          Luna en Lesbos
+        </h2>
 
-  <div class="hero-gradient"></div>
+        <p class="text-2xl text-white/80 leading-relaxed mb-10">
+          Esta noche quizás encuentras tu estrella...
+        </p>
 
-  <div class="hero-content">
+        <!-- INFO -->
+        <div class="space-y-6 mb-12">
 
-    <p>
-      Comunidad • Mujeres • Experiencia
-    </p>
+          <!-- FECHA -->
+          <div class="flex items-center gap-4">
 
-    <h2>
-      LUNA EN LESBOS
-    </h2>
+            <div class="text-4xl">
+              📅
+            </div>
 
-    <div class="hero-buttons">
+            <div>
 
-      <a
-        href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
-        target="_blank"
-        class="hero-btn btn-primary"
-      >
-        Comprar Entradas 🎟️
-      </a>
+              <p class="text-white/50 uppercase text-sm tracking-widest">
+                Fecha
+              </p>
 
-      <a
-        href="#que-es"
-        class="hero-btn btn-secondary"
-      >
-        ¿Qué es Luna? 🌙
-      </a>
+              <h3 class="text-2xl font-bold">
+                Viernes 12 de Junio · 19:00 hrs
+              </h3>
+
+            </div>
+
+          </div>
+
+          <!-- LUGAR -->
+          <div class="flex items-center gap-4">
+
+            <div class="text-4xl">
+              📍
+            </div>
+
+            <div>
+
+              <p class="text-white/50 uppercase text-sm tracking-widest">
+                Bar Cabaret Piraña
+              </p>
+
+              <h3 class="text-2xl font-bold">
+                Bombero Núñez 365 · Recoleta · Santiago
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- COUNTDOWN -->
+        <!-- ========================= -->
+
+        <div class="grid grid-cols-4 gap-4 mb-12">
+
+          <!-- DIAS -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="days-stgo" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Días
+            </p>
+
+          </div>
+
+          <!-- HORAS -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="hours-stgo" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Horas
+            </p>
+
+          </div>
+
+          <!-- MIN -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="minutes-stgo" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Min
+            </p>
+
+          </div>
+
+          <!-- SEG -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="seconds-stgo" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Seg
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- BOTON -->
+        <a
+          href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
+          target="_blank"
+          class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-pink-600 hover:bg-pink-500 transition duration-300 text-xl font-bold shadow-2xl hover:scale-105"
+        >
+          Comprar Entradas 🎟️
+        </a>
+
+      </div>
+
+      <!-- DERECHA -->
+      <div class="relative">
+
+        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
+
+          <img
+            src="12junio.jpg"
+            alt="Luna en Lesbos"
+            class="w-full object-cover"
+          >
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -598,45 +1704,229 @@ MOBILE
 
 </section>
 
-<!-- QUE ES -->
+<!-- ========================= -->
+<!-- SCRIPT COUNTDOWN STGO -->
+<!-- ========================= -->
 
-<section id="que-es" class="section">
+<script>
 
-  <div class="container">
+const countdownStgo = new Date("June 12, 2026 19:00:00").getTime();
 
-    <div class="about-grid">
+const timerStgo = setInterval(function(){
 
-      <div class="about-image">
+  const now = new Date().getTime();
 
-        <img src="foto2.jpg">
+  const distance = countdownStgo - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
+
+  document.getElementById("days-stgo").innerHTML = days;
+  document.getElementById("hours-stgo").innerHTML = hours;
+  document.getElementById("minutes-stgo").innerHTML = minutes;
+  document.getElementById("seconds-stgo").innerHTML = seconds;
+
+  if(distance < 0){
+
+    clearInterval(timerStgo);
+
+    document.getElementById("days-stgo").innerHTML = "00";
+    document.getElementById("hours-stgo").innerHTML = "00";
+    document.getElementById("minutes-stgo").innerHTML = "00";
+    document.getElementById("seconds-stgo").innerHTML = "00";
+
+  }
+
+},1000);
+
+</script>
+
+
+
+
+<!-- ========================= -->
+<!-- EVENTO VIÑA FINAL CORREGIDO -->
+<!-- ========================= -->
+
+<section id="proximo-evento-vina" class="relative py-28 bg-black text-white overflow-hidden">
+
+  <!-- FONDO -->
+  <div class="absolute inset-0">
+
+    <img
+      src="13vin.jpg"
+      alt="Luna en Lesbos"
+      class="w-full h-full object-cover opacity-20"
+    >
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black"></div>
+
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- IZQUIERDA -->
+      <div>
+
+        <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+          Próximo evento · Llegamos a Viña del Mar
+        </span>
+
+        <h2 class="text-6xl md:text-7xl font-black leading-none mt-6 mb-8">
+          Luna en Lesbos
+        </h2>
+
+        <p class="text-2xl text-white/80 leading-relaxed mb-10">
+          Esta noche quizás encuentras tu estrella... o algo más ✨
+        </p>
+
+        <!-- INFO -->
+        <div class="space-y-6 mb-12">
+
+          <!-- FECHA -->
+          <div class="flex items-center gap-4">
+
+            <div class="text-4xl">
+              📅
+            </div>
+
+            <div>
+
+              <p class="text-white/50 uppercase text-sm tracking-widest">
+                Fecha
+              </p>
+
+              <h3 class="text-2xl font-bold">
+                Sábado 13 de junio · 19:00 hrs
+              </h3>
+
+            </div>
+
+          </div>
+
+          <!-- LUGAR -->
+          <div class="flex items-center gap-4">
+
+            <div class="text-4xl">
+              📍
+            </div>
+
+            <div>
+
+              <p class="text-white/50 uppercase text-sm tracking-widest">
+                Modo Gastrobar
+              </p>
+
+              <h3 class="text-2xl font-bold">
+                2 Norte 165 · Viña del Mar
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- COUNTDOWN -->
+        <!-- ========================= -->
+
+        <div class="grid grid-cols-4 gap-4 mb-12">
+
+          <!-- DIAS -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="days-vina" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Días
+            </p>
+
+          </div>
+
+          <!-- HORAS -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="hours-vina" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Horas
+            </p>
+
+          </div>
+
+          <!-- MIN -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="minutes-vina" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Min
+            </p>
+
+          </div>
+
+          <!-- SEG -->
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+
+            <div id="seconds-vina" class="text-4xl font-black text-pink-500">
+              00
+            </div>
+
+            <p class="text-white/50 text-sm uppercase mt-2">
+              Seg
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- BOTON -->
+        <a
+          href="https://www.passline.com/eventos/luna-en-lesbos-vina-del-mar-1edicion-2026"
+          class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-pink-600 hover:bg-pink-500 transition duration-300 text-xl font-bold shadow-2xl hover:scale-105"
+        >
+          Comprar Entradas 🎟️
+        </a>
 
       </div>
 
-      <div class="about-content">
+      <!-- DERECHA -->
+      <div class="relative">
 
-        <h3>
-          Más que una fiesta.
-        </h3>
+        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
 
-        <p>
-          Luna en Lesbos nace como un espacio creado por y para mujeres lesbianas y personas queer que buscan conectar desde la autenticidad, la libertad y la comunidad.
-        </p>
+          <img
+            src="13vin.jpg"
+            alt="Luna en Lesbos"
+            class="w-full object-cover"
+          >
 
-        <p>
-          Creamos experiencias donde la música, la comedia, el arte y la conversación se encuentran en un mismo lugar.
-        </p>
-
-        <ul class="about-list">
-
-          <li>✨ Espacios seguros</li>
-
-          <li>🌈 Comunidad lésbica real</li>
-
-          <li>🎤 Humor, música y experiencias</li>
-
-          <li>💜 Mujeres conectando</li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -646,55 +1936,188 @@ MOBILE
 
 </section>
 
-<!-- EXPERIENCIAS -->
+<!-- ========================= -->
+<!-- SCRIPT COUNTDOWN -->
+<!-- ========================= -->
 
-<section id="experiencias" class="section">
+<script>
 
-  <div class="container">
+const countdownVina = new Date("June 13, 2026 19:00:00").getTime();
 
-    <div class="section-title">
+const timerVina = setInterval(function(){
 
-      <span>LO QUE PASA EN LUNA</span>
+  const now = new Date().getTime();
 
-      <h2>
-        Experiencias Reales ✨
+  const distance = countdownVina - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
+
+  document.getElementById("days-vina").innerHTML = days;
+  document.getElementById("hours-vina").innerHTML = hours;
+  document.getElementById("minutes-vina").innerHTML = minutes;
+  document.getElementById("seconds-vina").innerHTML = seconds;
+
+  if(distance < 0){
+
+    clearInterval(timerVina);
+
+    document.getElementById("days-vina").innerHTML = "00";
+    document.getElementById("hours-vina").innerHTML = "00";
+    document.getElementById("minutes-vina").innerHTML = "00";
+    document.getElementById("seconds-vina").innerHTML = "00";
+
+  }
+
+},1000);
+
+</script>
+
+
+      <!-- DERECHA / FLYER -->
+      <div class="relative">
+
+        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
+
+          <img
+            src="12junio.jpg"
+            alt="Luna en Lesbos"
+            class="w-full object-cover"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SCRIPT COUNTDOWN -->
+<!-- ========================= -->
+
+<script>
+
+const countdownDate = new Date("June 28, 2026 21:00:00").getTime();
+
+const timer = setInterval(function() {
+
+  const now = new Date().getTime();
+
+  const distance = countdownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  if (distance < 0) {
+
+    clearInterval(timer);
+
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+
+  }
+
+}, 1000);
+
+</script>
+<!-- ========================= -->
+<!-- TIKTOK / REELS -->
+<!-- ========================= -->
+
+<section id="tiktok" class="py-24 bg-black text-white overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TITULO -->
+    <div class="text-center mb-16">
+
+      <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+        Viral en redes
+      </span>
+
+      <h2 class="text-5xl md:text-7xl font-black mt-4 mb-6">
+        Lo que pasa en Luna 👀
       </h2>
 
-      <p>
-        Mujeres que llegan solas y terminan haciendo amigas, conexiones y recuerdos inolvidables.
+      <p class="text-white/60 text-lg md:text-xl max-w-3xl mx-auto">
+        Comedia, conexión, fiesta y momentos reales
+        que están haciendo crecer la comunidad Luna.
       </p>
 
     </div>
 
-    <div class="cards">
+    <!-- VIDEOS -->
+    <div class="flex flex-wrap justify-center gap-8">
 
-      <div class="card">
+      <!-- VIDEO 1 -->
+      <div class="rounded-[30px] overflow-hidden border border-pink-500/20 shadow-2xl">
 
-        <h3>🌙 Comunidad</h3>
-
-        <p>
-          Un espacio donde puedes sentirte libre, auténtica y parte de algo.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>🎤 Comedia & Música</h3>
-
-        <p>
-          Stand-up, shows en vivo y una atmósfera distinta a cualquier fiesta tradicional.
-        </p>
+        <iframe
+          src="https://www.tiktok.com/embed/v2/7636891343662435591"
+          width="325"
+          height="740"
+          frameborder="0"
+          allowfullscreen
+          class="bg-black">
+        </iframe>
 
       </div>
 
-      <div class="card">
+      <!-- VIDEO 2 -->
+      <div class="rounded-[30px] overflow-hidden border border-pink-500/20 shadow-2xl">
 
-        <h3>💜 Mujeres reales</h3>
+        <iframe
+          src="https://www.tiktok.com/embed/v2/7634193136423619848"
+          width="325"
+          height="740"
+          frameborder="0"
+          allowfullscreen
+          class="bg-black">
+        </iframe>
 
-        <p>
-          Conexiones genuinas en espacios seguros y pensados especialmente para lesbianas.
-        </p>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="rounded-[30px] overflow-hidden border border-pink-500/20 shadow-2xl">
+
+        <iframe
+          src="https://www.tiktok.com/embed/v2/7630489547020815624"
+          width="325"
+          height="740"
+          frameborder="0"
+          allowfullscreen
+          class="bg-black">
+        </iframe>
 
       </div>
 
@@ -703,32 +2126,921 @@ MOBILE
   </div>
 
 </section>
+
+<!-- ========================= -->
+<!-- FAQ / PREGUNTAS -->
+<!-- ========================= -->
+
+<section id="faq" class="py-24 bg-[#050505] text-white">
+
+  <div class="max-w-4xl mx-auto px-6">
+
+    <!-- TITULO -->
+    <div class="text-center mb-16">
+
+      <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+        Preguntas Frecuentes
+      </span>
+
+      <h2 class="text-5xl md:text-6xl font-black mt-4 mb-6">
+        Todo lo que necesitas saber 💡
+      </h2>
+
+      <p class="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
+        Queremos que te sientas cómoda, segura
+        y sepas exactamente qué esperar.
+      </p>
+
+    </div>
+
+    <!-- ACORDEON PREGUNTAS LUNA FAQ-->
+    <div class="space-y-4">
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Puedo ir sola?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          Sí. Muchas mujeres llegan solas y terminan compartiendo,
+          riéndose y conectando con otras personas durante la noche.
+          Luna está pensado como un espacio seguro y acogedor.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Qué edades van normalmente?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          Principalmente mujeres entre 25 a 45 años,
+          aunque llegan personas de distintas edades
+          con ganas de disfrutar, reír y conectar.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Es un espacio seguro?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          Totalmente. Luna busca crear un ambiente cómodo,
+          libre de discriminación y respetuoso para todas,libre de hombres
+          y parejas heteros.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Puedo ir con amigos hombres?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          No. Luna en Lesbos es un espacio pensado exclusivamente
+          para mujeres lesbianas, buscando mantener la experiencia,
+          comodidad y dinámica del evento.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Dónde son los eventos?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          Los eventos se realizan en distintas locaciones de Santiago y Regiones de chile .
+          La dirección exacta aparece publicada en cada evento.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Dónde compro las entradas?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          Las entradas están disponibles online a través de
+          Passline siempre un con un link y salen siempre mucho antes de cada evento.
+          Recomendamos comprar anticipadamente porque muchos
+          eventos tienen cupos limitados.
+        </div>
+
+      </details>
+
+      <!-- ITEM -->
+      <details class="group bg-white/5 border border-pink-500/20 rounded-2xl overflow-hidden">
+
+        <summary class="flex items-center justify-between cursor-pointer list-none p-6 text-lg font-bold hover:bg-white/5 transition">
+
+          ¿Qué incluye la experiencia Luna?
+
+          <span class="text-pink-500 text-2xl group-open:rotate-45 transition duration-300">
+            +
+          </span>
+
+        </summary>
+
+        <div class="px-6 pb-6 text-white/70 leading-relaxed">
+          ✨ Una noche única pensada para mujeres y disidencias en un ambiente seguro, libre y lleno de energía.
+
+🌙 Música y ambiente dark/cinematic
+🥂 Barra, brindis y momentos para conectar
+💃 risas y comunidad real
+📸 recuerdos inolvidables
+🎭 Shows, sorpresas y experiencias en vivo
+🖤 Una atmósfera íntima, elegante y distinta a cualquier fiesta tradicional
+
+Luna no es solo un evento.
+Es una experiencia donde puedes sentirte libre, cómoda y parte de algo especial.
+        </div>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GALERÍA LUNA EN LESBOS -->
+<!-- ========================= -->
+
+<section class="luna-gallery-section">
+
+    <div class="luna-bg-glow"></div>
+
+    <div class="luna-gallery-content">
+
+        <span class="luna-badge">
+            EXPERIENCIAS REALES
+        </span>
+
+        <h2>
+            ✨ MOMENTOS LUNA ✨
+        </h2>
+
+        <p>
+            Mujeres, música, conexión y noches que quedan para siempre 🌙
+        </p>
+
+        <div class="gallery-box">
+
+            <div class="taggbox"
+                style="width:100%;height:900px;overflow:auto;"
+                data-widget-id="326527"
+                data-website="1">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://widget.taggbox.com/embed.min.js"></script>
+
+<style>
+
+/* ========================= */
+/* SECCIÓN GENERAL */
+/* ========================= */
+
+.luna-gallery-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 20px;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,0,140,.15) 0%,
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(132,0,255,.18) 0%,
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #120014 0%,
+    #1c0024 40%,
+    #09000d 100%
+    );
+}
+
+/* ========================= */
+/* EFECTOS DE FONDO */
+/* ========================= */
+
+.luna-bg-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    url('https://www.transparenttextures.com/patterns/stardust.png');
+
+    opacity:.08;
+
+    pointer-events:none;
+}
+
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
+.luna-gallery-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+/* ========================= */
+/* BADGE */
+/* ========================= */
+
+.luna-badge{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:#ff73d2;
+
+    font-size:.85rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+}
+
+/* ========================= */
+/* TITULO */
+/* ========================= */
+
+.luna-gallery-content h2{
+
+    color:white;
+
+    font-size:4.2rem;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    letter-spacing:4px;
+
+    text-shadow:
+    0 0 12px rgba(255,0,140,.45),
+    0 0 35px rgba(132,0,255,.25);
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.luna-gallery-content p{
+
+    color:#d8bfdc;
+
+    font-size:1.1rem;
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    line-height:1.8;
+}
+
+/* ========================= */
+/* CONTENEDOR GALERÍA */
+/* ========================= */
+
+.gallery-box{
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    padding:15px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+    0 0 50px rgba(255,0,140,.12),
+    0 30px 80px rgba(0,0,0,.45);
+}
+
+/* ========================= */
+/* TAGGBOX */
+/* ========================= */
+
+.taggbox{
+
+    border-radius:25px;
+
+    overflow:hidden;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .luna-gallery-section{
+
+        padding:80px 15px;
+    }
+
+    .luna-gallery-content h2{
+
+        font-size:2.4rem;
+
+        letter-spacing:2px;
+    }
+
+    .luna-gallery-content p{
+
+        font-size:1rem;
+    }
+
+    .gallery-box{
+
+        padding:10px;
+    }
+
+}
+
+</style>
+
+<!-- ========================= -->
+<!-- TESTIMONIOS -->
+<!-- ========================= -->
+
+<section id="testimonios" class="py-24 bg-black text-white overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TITULO -->
+    <div class="text-center mb-16">
+
+      <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+        Comunidad Luna
+      </span>
+
+      <h2 class="text-5xl md:text-6xl font-black mt-4 mb-6 leading-tight">
+        Lo que se vive en Luna ✨
+      </h2>
+
+      <p class="text-white/60 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+        Mujeres reales compartiendo una experiencia
+        llena de humor, libertad, conexión y comunidad.
+      </p>
+
+    </div>
+
+    <!-- GRID TESTIMONIOS -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-white/5 backdrop-blur-lg border border-pink-500/20 rounded-3xl p-8 hover:border-pink-500/50 hover:-translate-y-2 transition duration-500 shadow-2xl">
+
+        <!-- ESTRELLAS -->
+        <div class="text-pink-500 text-xl mb-6">
+          ★★★★★
+        </div>
+
+        <!-- TEXTO -->
+        <p class="text-white/80 text-lg leading-relaxed mb-8">
+          “Nunca había encontrado un espacio así.
+          Fui sola y terminé riéndome toda la noche
+          con personas increíbles.”
+        </p>
+
+        <!-- PERFIL -->
+        <div class="flex items-center gap-4">
+
+          <img
+            src="https://i.pravatar.cc/100?img=32"
+            alt="Camila"
+            class="w-16 h-16 rounded-full object-cover border-2 border-pink-500"
+          >
+
+          <div>
+            <h4 class="font-bold text-lg">
+              Camila R.
+            </h4>
+
+            <p class="text-white/50 text-sm">
+              32 años · Providencia
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white/5 backdrop-blur-lg border border-pink-500/20 rounded-3xl p-8 hover:border-pink-500/50 hover:-translate-y-2 transition duration-500 shadow-2xl">
+
+        <!-- ESTRELLAS -->
+        <div class="text-pink-500 text-xl mb-6">
+          ★★★★★
+        </div>
+
+        <!-- TEXTO -->
+        <p class="text-white/80 text-lg leading-relaxed mb-8">
+          “Por fin un lugar donde una puede sentirse cómoda,
+          libre y sin miedo al juicio. Se siente seguro y real.”
+        </p>
+
+        <!-- PERFIL -->
+        <div class="flex items-center gap-4">
+
+          <img
+            src="https://i.pravatar.cc/100?img=9"
+            alt="Valentina"
+            class="w-16 h-16 rounded-full object-cover border-2 border-pink-500"
+          >
+
+          <div>
+            <h4 class="font-bold text-lg">
+              Valentina M.
+            </h4>
+
+            <p class="text-white/50 text-sm">
+              28 años · Ñuñoa
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white/5 backdrop-blur-lg border border-pink-500/20 rounded-3xl p-8 hover:border-pink-500/50 hover:-translate-y-2 transition duration-500 shadow-2xl">
+
+        <!-- ESTRELLAS -->
+        <div class="text-pink-500 text-xl mb-6">
+          ★★★★★
+        </div>
+
+        <!-- TEXTO -->
+        <p class="text-white/80 text-lg leading-relaxed mb-8">
+          “Más que un evento, se siente como una comunidad.
+          Ya quiero volver al próximo Luna.”
+        </p>
+
+        <!-- PERFIL -->
+        <div class="flex items-center gap-4">
+
+          <img
+            src="https://i.pravatar.cc/100?img=45"
+            alt="Fernanda"
+            class="w-16 h-16 rounded-full object-cover border-2 border-pink-500"
+          >
+
+          <div>
+            <h4 class="font-bold text-lg">
+              Fernanda G.
+            </h4>
+
+            <p class="text-white/50 text-sm">
+              35 años · Santiago Centro
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- VIDEO LUNA -->
+<!-- ========================= -->
+
+<section id="video" class="py-24 bg-[#050505] text-white">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- TITULO -->
+    <div class="text-center mb-14">
+
+      <span class="text-pink-500 uppercase tracking-[0.3em] text-sm font-bold">
+        Vive la experiencia
+      </span>
+
+      <h2 class="text-5xl md:text-6xl font-black mt-4 mb-6">
+        Esto es Luna ✨
+      </h2>
+
+      <p class="text-white/60 text-lg md:text-xl max-w-3xl mx-auto">
+        Junta de mujeres lesbianas.
+      </p>
+
+    </div>
+
+    <!-- VIDEO -->
+    <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-pink-500/20">
+
+      <div class="aspect-video">
+
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/N8S9m7qpRyw"
+          title="Luna en Lesbos"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos" class="py-28 px-6 bg-fuchsia-950/10 border-y border-fuchsia-500/10">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- TITULO -->
+    <div class="mb-16 text-center">
+
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-4">
+
+        ENCUENTRA TU ESTRELLA 
+
+      </p>
+
+      <h2 class="text-5xl md:text-6xl font-black">
+
+        NUESTROS EVENTOS
+
+      </h2>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- EVENTO 1 -->
+      <div
+        onclick="openModal(
+        'evento1.jpg',
+        'LUNA 3 EDICIÓN JUNIO 2026',
+        'Junta de mujeres lesbianas, comunidad y risas toda la noche.',
+        'Viernes 12 de junio · 19:00 hrs · Santiago',
+        'https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
+
+        <img src="evento1.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            LUNA EN LESBOS EDICIÓN 3 
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            JUNTA DE CHICAS 
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div
+        onclick="openModal(
+        '13vin.jpg',
+        'LUNA 1°EDICIÓN VIÑA JUNIO 13- 2026',
+        'Nuestra nueva junta es viña del mar',
+        'Sábado 13 de junio · 19:00 hrs ',
+        'https://www.passline.com/eventos/luna-en-lesbos-vina-del-mar-1edicion-2026'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
+
+        <img src="13vin.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            LUNA VIÑA DEL MAR 1°EDICIÓN
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            NUEVA JUNTA DE MUJERES 
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div
+        onclick="openModal(
+        'evento3.jpg',
+        '1° LUNA DEL 2026',
+        'CONOCE CHICAS , evento solo para mujeres lesbianas este 2026 una vez al mes nos vemos',
+        'Viernes 10 de abril · 19:00 hrs · Santiago',
+        'https://www.passline.com'
+        )"
+        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+      >
+
+        <img src="evento3.jpg" class="h-80 w-full object-cover">
+
+        <div class="p-7">
+
+          <h3 class="text-3xl font-bold mb-3">
+            Queer Experience
+          </h3>
+
+          <p class="text-gray-300 mb-7">
+            Cultura queer y comunidad.
+          </p>
+
+          <button class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-4 rounded-full font-semibold">
+
+            Ver evento
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div
+  id="eventModal"
+  class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-6"
+>
+
+  <div class="bg-[#111] max-w-2xl w-full rounded-[35px] overflow-hidden border border-fuchsia-500/20 relative">
+
+    <!-- CERRAR -->
+    <button
+      onclick="closeModal()"
+      class="absolute top-5 right-5 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full z-20"
+    >
+      ✕
+    </button>
+
+    <!-- FOTO -->
+    <img
+      id="modalImage"
+      src=""
+      class="w-full h-[450px] object-cover"
+    >
+
+    <!-- CONTENIDO -->
+    <div class="p-8">
+
+      <h3
+        id="modalTitle"
+        class="text-4xl font-black mb-5"
+      ></h3>
+
+      <p
+        id="modalDescription"
+        class="text-gray-300 text-lg leading-relaxed mb-6"
+      ></p>
+
+      <p
+        id="modalDate"
+        class="text-fuchsia-300 mb-8 text-lg"
+      ></p>
+
+      <!-- BOTON -->
+      <a
+        id="modalLink"
+        href="#"
+        target="_blank"
+        class="block text-center bg-fuchsia-500 hover:bg-fuchsia-400 transition py-5 rounded-full text-lg font-bold"
+      >
+
+        Comprar en Passline
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function openModal(image, title, description, date, link){
+
+  document.getElementById('modalImage').src = image;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalDate').innerText = date;
+  document.getElementById('modalLink').href = link;
+
+  document.getElementById('eventModal').classList.remove('hidden');
+  document.getElementById('eventModal').classList.add('flex');
+
+}
+
+function closeModal(){
+
+  document.getElementById('eventModal').classList.add('hidden');
+  document.getElementById('eventModal').classList.remove('flex');
+
+}
+
+</script>
 
 <!-- GALERIA -->
+<section id="galeria" class="py-28 overflow-hidden bg-black">
 
-<section id="galeria" class="section">
+  <div class="max-w-7xl mx-auto px-6">
 
-  <div class="container">
+    <!-- TITULO -->
+    <div class="text-center mb-16">
 
-    <div class="section-title">
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-4">
 
-      <span>MOMENTOS LUNA</span>
+        GALERÍA
 
-      <h2>
-        Galería 🌙
+      </p>
+
+      <h2 class="text-5xl md:text-6xl font-black mb-6">
+
+        Así se vive Luna
+
       </h2>
+
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+
+        Comunidad, fiestas, humor, cultura y encuentros reales.
+
+      </p>
 
     </div>
 
-    <div class="gallery">
+  </div>
 
-      <img src="foto1.jpg">
+  <!-- CARRUSEL -->
+  <div class="relative">
 
-      <img src="foto2.jpg">
+    <!-- DIFUMINADO -->
+    <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
 
-      <img src="foto3.jpg">
+    <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
 
-      <img src="foto4.jpg">
+    <!-- SLIDER -->
+    <div class="flex gap-6 animate-gallery w-max px-6">
+
+      <!-- FOTO -->
+      <img onclick="openGallery('galeria1.jpg')" src="galeria1.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria2.jpg')" src="galeria2.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria3.jpg')" src="galeria3.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria4.jpg')" src="galeria4.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria5.jpg')" src="galeria5.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria6.jpg')" src="galeria6.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria7.jpg')" src="galeria7.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria8.jpg')" src="galeria8.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria9.jpg')" src="galeria9.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria10.jpg')" src="galeria10.jpg" class="gallery-img">
+
+      <!-- DUPLICADAS -->
+      <img onclick="openGallery('galeria1.jpg')" src="galeria1.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria2.jpg')" src="galeria2.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria3.jpg')" src="galeria3.jpg" class="gallery-img">
+
+      <img onclick="openGallery('galeria4.jpg')" src="galeria4.jpg" class="gallery-img">
 
     </div>
 
@@ -736,59 +3048,256 @@ MOBILE
 
 </section>
 
-<!-- FAQ -->
+<!-- MODAL GALERIA -->
+<div
+  id="galleryModal"
+  class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50 p-6"
+>
 
-<section id="faq" class="section">
+  <!-- BOTON -->
+  <button
+    onclick="closeGallery()"
+    class="absolute top-6 right-6 text-white text-5xl z-50"
+  >
+    ×
+  </button>
 
-  <div class="container">
+  <!-- IMAGEN -->
+  <img
+    id="galleryImage"
+    src=""
+    class="max-w-full max-h-[90vh] rounded-3xl shadow-2xl"
+  >
 
-    <div class="section-title">
+</div>
 
-      <span>PREGUNTAS</span>
+<!-- ESTILOS -->
+<style>
 
-      <h2>
-        FAQ 💡
+@keyframes galleryScroll {
+
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(-50%);
+  }
+
+}
+
+.animate-gallery{
+  animation: galleryScroll 45s linear infinite;
+}
+
+.animate-gallery:hover{
+  animation-play-state: paused;
+}
+
+.gallery-img{
+
+  width: 420px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid rgba(255,0,255,0.15);
+
+}
+
+.gallery-img:hover{
+
+  transform: scale(1.04);
+
+}
+
+</style>
+
+<!-- SCRIPT -->
+<script>
+
+function openGallery(image){
+
+  document.getElementById("galleryImage").src = image;
+
+  document.getElementById("galleryModal").classList.remove("hidden");
+  document.getElementById("galleryModal").classList.add("flex");
+
+}
+
+function closeGallery(){
+
+  document.getElementById("galleryModal").classList.add("hidden");
+  document.getElementById("galleryModal").classList.remove("flex");
+
+}
+
+</script>
+  <!--instaluna-->
+
+<section class="instagram-luna">
+  <h2>🌙 Comunidad Luna</h2>
+
+  <!-- Elfsight Instagram Feed -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-1262f370-2fab-48f9-9fa1-a2894fb68a13" data-elfsight-app-lazy></div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-32 px-6 border-t border-fuchsia-500/10 bg-gradient-to-b from-black to-fuchsia-950/10">
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+
+    <!-- TEXTO -->
+    <div>
+
+      <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-6">
+
+        CONTACTO
+
+      </p>
+
+      <h2 class="text-5xl md:text-7xl font-black leading-[0.95] mb-8">
+
+        Hablemos.<br>
+        Conectemos.
+
       </h2>
+
+      <p class="text-xl text-gray-300 leading-relaxed mb-10">
+
+        ¿Quieres asistir a un evento, colaborar con Luna en Lesbos
+        o crear una experiencia junto a nuestra comunidad?
+
+      </p>
+
+
+
+      <!-- INFO -->
+      <div class="space-y-6">
+
+        <div>
+
+          <p class="text-fuchsia-300 text-sm uppercase tracking-[4px] mb-2">
+
+            Instagram
+
+          </p>
+
+          <a
+            href="https://www.instagram.com/lunaenlesbos/"
+            target="_blank"
+            class="text-2xl font-bold hover:text-fuchsia-300 transition"
+          >
+
+            @lunaenlesbos
+
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="text-fuchsia-300 text-sm uppercase tracking-[4px] mb-2">
+
+            Comunidad
+
+          </p>
+
+          <p class="text-gray-400 text-lg">
+
+            Santiago de Chile · Mujeres lesbianas
+
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="faq">
+  
 
-      <details>
 
-        <summary>
-          ¿Puedo ir sola?
-        </summary>
 
-        <p>
-          Sí. Muchas mujeres llegan solas y terminan compartiendo y conectando con otras personas durante la noche.
-        </p>
+    <!-- FORMULARIO -->
+    <div class="bg-white/5 border border-fuchsia-500/20 rounded-[40px] p-10 backdrop-blur-xl">
 
-      </details>
+      <form
+        action="https://formspree.io/f/xkoewwdw"
+        method="POST"
+        class="space-y-6"
+      >
 
-      <details>
+        <!-- NOMBRE -->
+        <div>
 
-        <summary>
-          ¿Es un espacio seguro?
-        </summary>
+          <label class="block text-sm text-fuchsia-300 mb-3 uppercase tracking-[3px]">
 
-        <p>
-          Totalmente. Luna busca crear un ambiente cómodo, libre y respetuoso.
-        </p>
+            Nombre
 
-      </details>
+          </label>
 
-      <details>
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+            class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400"
+          >
 
-        <summary>
-          ¿Dónde compro entradas?
-        </summary>
+        </div>
 
-        <p>
-          Las entradas están disponibles online vía Passline.
-        </p>
+        <!-- EMAIL -->
+        <div>
 
-      </details>
+          <label class="block text-sm text-fuchsia-300 mb-3 uppercase tracking-[3px]">
+
+            Email
+
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="tunombre@email.com"
+            required
+            class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400"
+          >
+
+        </div>
+
+        <!-- MENSAJE -->
+        <div>
+
+          <label class="block text-sm text-fuchsia-300 mb-3 uppercase tracking-[3px]">
+
+            Mensaje
+
+          </label>
+
+          <textarea
+            name="mensaje"
+            rows="6"
+            placeholder="Escribe tu mensaje..."
+            required
+            class="w-full bg-black/40 border border-fuchsia-500/20 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-fuchsia-400 resize-none"
+          ></textarea>
+
+        </div>
+
+        <!-- BOTON -->
+        <button
+          type="submit"
+          class="w-full bg-fuchsia-500 hover:bg-fuchsia-400 transition py-5 rounded-full text-lg font-bold shadow-2xl shadow-fuchsia-500/30"
+        >
+
+          Enviar mensaje
+
+        </button>
+
+      </form>
 
     </div>
 
@@ -796,63 +3305,105 @@ MOBILE
 
 </section>
 
+<section class="py-24 px-6">
+
+  <div class="max-w-6xl mx-auto bg-gradient-to-r from-fuchsia-700/30 to-violet-700/20 border border-fuchsia-500/20 rounded-[45px] p-16 text-center">
+
+    <h2 class="text-5xl md:text-6xl font-black mb-8">
+
+      Sé parte de Luna en Lesbos
+
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed mb-10">
+
+      Vive las juntas, comunidad, cultura y experiencias únicas
+      junto a mujeres lesbianas en todo Chile.
+
+    </p>
+
+    <a
+      href="https://www.instagram.com/lunaenlesbos/"
+      target="_blank"
+      class="inline-block bg-fuchsia-500 hover:bg-fuchsia-400 transition px-10 py-5 rounded-full text-xl font-bold shadow-2xl shadow-fuchsia-500/30"
+    >
+
+      Quiero unirme
+
+    </a>
+
+  </div>
+
+</section>
+<!-- REDES SOCIALES -->
+<section class="py-16 px-6 border-t border-fuchsia-500/10">
+
+  <div class="max-w-6xl mx-auto text-center">
+
+    <p class="uppercase tracking-[6px] text-fuchsia-300 text-sm mb-10">
+
+      SÍGUENOS
+
+    </p>
+
+    <div class="flex justify-center gap-6">
+
+      <!-- INSTAGRAM -->
+      <a
+        href="https://www.instagram.com/lunaenlesbos/"
+        target="_blank"
+        class="w-16 h-16 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition duration-300"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+        </svg>
+
+      </a>
+
+      <!-- FACEBOOK -->
+      <a
+        href="https://www.facebook.com/profile.php?id=61564150917080"
+        target="_blank"
+        class="w-16 h-16 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition duration-300"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 22v-9h3l1-4h-4V7c0-1.2.3-2 2-2h2V1.5c-.4-.1-1.8-.2-3.3-.2-3.3 0-5.7 2-5.7 5.8V9H5v4h3v9h5z"/>
+        </svg>
+
+      </a>
+
+      <!-- THREADS -->
+      <a
+        href="https://www.threads.com/@lunaenlesbos"
+        target="_blank"
+        class="w-16 h-16 rounded-full bg-white/5 border border-fuchsia-500/20 flex items-center justify-center hover:bg-fuchsia-500 hover:scale-110 transition duration-300"
+      >
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.5 11.8c-.2-.1-.5-.2-.8-.3 0-.2 0-.5-.1-.7-.3-2.2-1.7-3.5-3.8-3.5-1.3 0-2.4.5-3.1 1.4l1.3.9c.4-.5 1-.8 1.8-.8 1.2 0 1.9.7 2.1 2-.6-.1-1.3-.1-2-.1-3.1 0-5 1.3-5 3.6 0 2.2 1.7 3.6 4.2 3.6 1.8 0 3.1-.8 3.8-2.2.5-.9.7-1.9.7-3 .4.1.7.2 1 .4.7.4 1 .9 1 1.6 0 1.2-1 2.1-2.7 2.4l.4 1.5c2.5-.4 4-1.9 4-3.9 0-1.3-.7-2.3-2-3.1zm-4.6 4.4c-1.4 0-2.3-.6-2.3-1.7 0-1.2 1-1.9 3-1.9.5 0 1 0 1.5.1 0 2.1-.8 3.5-2.2 3.5z"/>
+        </svg>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 <!-- FOOTER -->
+<footer id="contacto" class="border-t border-fuchsia-500/10 py-14 text-center text-gray-400">
 
-<footer id="contacto">
-
-  <h3>
-    Luna en Lesbos 🌙
-  </h3>
+  <p class="mb-3 text-lg">
+    © Luna en Lesbos
+  </p>
 
   <p>
-    Comunidad • Mujeres • Experiencias reales
+    Comunidad Mujeres lesbianas · Santiago de Chile
   </p>
 
 </footer>
-
-<!-- WHATSAPP -->
-
-<a
-  href="https://wa.me/56940019956"
-  target="_blank"
-  class="whatsapp"
->
-
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
-</a>
-
-<!-- STICKY CTA -->
-
-<a
-  href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
-  target="_blank"
-  class="ticket-btn"
->
-
-  🎟️ COMPRAR ENTRADAS
-
-</a>
-
-<!-- SMOOTH SCROLL -->
-
-<script>
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-  anchor.addEventListener('click', function(e) {
-
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior:'smooth'
-    });
-
-  });
-
-});
-
-</script>
 
 </body>
 </html>
