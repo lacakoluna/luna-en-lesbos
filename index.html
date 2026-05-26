@@ -698,7 +698,8 @@
 </section>
 
 <!-- =========================
-SECTION: ¿QUÉ ES LUNA?
+LUNA EN LESBOS - ¿QUÉ ES LUNA?
+PEGA TODO ESTO EN TU INDEX.HTML
 ========================= -->
 
 <section class="luna-about">
@@ -707,12 +708,17 @@ SECTION: ¿QUÉ ES LUNA?
 
   <div class="luna-container">
 
+    <!-- TITLE -->
+
     <div class="luna-title-box">
       <span class="luna-mini">COMUNIDAD • LIBERTAD • CONEXIÓN</span>
       <h2>¿Qué es Luna? 🌙</h2>
     </div>
 
+    <!-- TEXT -->
+
     <div class="luna-text">
+
       <p>
         <strong>Luna en Lesbos</strong> nació desde una necesidad real:
         crear un espacio donde las mujeres lesbianas y disidencias pudieran sentirse cómodas, libres y parte de una comunidad.
@@ -731,6 +737,7 @@ SECTION: ¿QUÉ ES LUNA?
       <p class="highlight">
         ✨ Aquí no tienes que explicar quién eres. Solo llegar y pertenecer.
       </p>
+
     </div>
 
     <!-- STATS -->
@@ -836,8 +843,257 @@ SECTION: ¿QUÉ ES LUNA?
 
 </section>
 
+<style>
 
+/* =========================
+LUNA ABOUT SECTION
+========================= */
 
+.luna-about{
+  position: relative;
+  background: #050505;
+  overflow: hidden;
+  padding: 120px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.luna-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(157,78,221,0.25), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,0,128,0.18), transparent 30%);
+  z-index: 1;
+}
+
+.luna-container{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+
+.luna-title-box{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.luna-mini{
+  color: #c084fc;
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.luna-title-box h2{
+  font-size: 58px;
+  margin-top: 15px;
+  font-weight: 800;
+  background: linear-gradient(to right,#fff,#c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+
+.luna-text{
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.luna-text p{
+  color: #d6d6d6;
+  line-height: 1.9;
+  margin-bottom: 25px;
+  font-size: 19px;
+}
+
+.luna-text .highlight{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* STATS */
+
+.luna-stats{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 80px;
+}
+
+.stat-card{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.stat-card:hover{
+  transform: translateY(-10px);
+  border-color: #c084fc;
+  box-shadow: 0 0 30px rgba(192,132,252,0.25);
+}
+
+.stat-card h3{
+  font-size: 42px;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.stat-card p{
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* EXPERIENCE */
+
+.experience-section{
+  margin-top: 110px;
+}
+
+.experience-title{
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.experience-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+
+.experience-card{
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(192,132,252,0.08)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+  padding: 35px;
+  line-height: 1.7;
+  color: #f1f1f1;
+  transition: 0.4s;
+}
+
+.experience-card:hover{
+  transform: scale(1.03);
+  border-color: #c084fc;
+}
+
+/* WHY */
+
+.why-luna{
+  margin-top: 110px;
+  text-align: center;
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.why-luna h3{
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.why-luna p{
+  color: #d4d4d4;
+  line-height: 1.9;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+/* CTA */
+
+.luna-cta{
+  margin-top: 100px;
+  text-align: center;
+  padding: 70px 30px;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(157,78,221,0.18),
+    rgba(255,0,128,0.12)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.luna-cta h2{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.luna-cta p{
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.luna-btn{
+  display: inline-block;
+  padding: 18px 42px;
+  border-radius: 60px;
+
+  background: linear-gradient(
+    to right,
+    #c084fc,
+    #ff4fd8
+  );
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  transition: 0.4s;
+}
+
+.luna-btn:hover{
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255,79,216,0.45);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .luna-title-box h2{
+    font-size: 40px;
+  }
+
+  .experience-title,
+  .why-luna h3,
+  .luna-cta h2{
+    font-size: 32px;
+  }
+
+  .luna-text p,
+  .why-luna p,
+  .luna-cta p{
+    font-size: 17px;
+  }
+
+  .luna-about{
+    padding: 90px 20px;
+  }
+
+}
+
+</style>
 
 
 <!-- ========================= -->
