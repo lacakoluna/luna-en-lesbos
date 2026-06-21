@@ -2315,6 +2315,157 @@ const timerVina = setInterval(function(){
 
 </style>
 
+<!-- =========================================
+     ESTADÍSTICAS LUNA EN LESBOS
+========================================= -->
+
+<section id="estadisticas-luna">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <div class="numero" data-target="600">0</div>
+            <div class="texto">
+                Mujeres Lesbianas
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="numero" data-target="16">0</div>
+            <div class="texto">
+                Eventos Realizados
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="numero" data-target="4">0</div>
+            <div class="texto">
+                Locaciones
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="numero" data-target="4">0</div>
+            <div class="texto">
+                Horas de Experiencia
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+#estadisticas-luna{
+    padding:100px 20px;
+    background:#0d0d0d;
+}
+
+.stats-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.numero{
+    font-size:3rem;
+    font-weight:900;
+    color:#ff4fd8;
+}
+
+.texto{
+    color:#d8d8d8;
+    margin-top:10px;
+    font-size:1rem;
+}
+
+</style>
+
+<script>
+
+const numeros =
+document.querySelectorAll('.numero');
+
+const observer =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+const contador = entry.target;
+
+const target =
++contador.getAttribute('data-target');
+
+let actual = 0;
+
+const incremento =
+target / 80;
+
+const actualizar = () => {
+
+actual += incremento;
+
+if(actual < target){
+
+contador.innerText =
+Math.floor(actual);
+
+requestAnimationFrame(actualizar);
+
+}else{
+
+contador.innerText =
+target.toLocaleString();
+
+}
+
+};
+
+actualizar();
+
+observer.unobserve(contador);
+
+}
+
+});
+
+},{threshold:.5});
+
+numeros.forEach(numero => {
+
+observer.observe(numero);
+
+});
+
+</script>
+
+
+
 <!-- ========================= -->
 <!-- TIKTOK / REELS -->
 <!-- ========================= -->
