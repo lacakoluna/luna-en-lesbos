@@ -1934,29 +1934,230 @@ const timerVina = setInterval(function(){
 },1000);
 
 </script>
-```
 
 
 
   
 
-<!-- FLYER SANTIAGO -->
-  <div class="flex justify-center">
-    <img
-      src="LUNA7AGOSTO.jpg"
-      alt="Luna Santiago"
-      class="w-full max-w-[420px] rounded-[30px] shadow-2xl border border-pink-500/20"
-    >
+<!-- FLYER juntos -->
+```html
+<!-- ========================================= -->
+<!-- FLYERS EVENTOS LUNA -->
+<!-- ========================================= -->
+
+<section class="flyers-luna">
+
+  <h2 class="titulo-flyers">
+    Próximos Eventos 🌙
+  </h2>
+
+  <div class="flyers-grid">
+
+    <!-- SANTIAGO -->
+    <div class="flyer-card">
+
+      <div class="glow"></div>
+
+      <img
+        src="LUNA7AGOSTO.jpg"
+        alt="Luna Santiago"
+      >
+
+      <div class="flyer-info">
+
+        <h3>Santiago</h3>
+
+        <p>
+          Viernes 7 Agosto · 19:00 hrs
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- VIÑA -->
+    <div class="flyer-card">
+
+      <div class="glow"></div>
+
+      <img
+        src="vina31.jpg"
+        alt="Luna Viña"
+      >
+
+      <div class="flyer-info">
+
+        <h3>Viña del Mar</h3>
+
+        <p>
+          Viernes 31 Julio · 19:30 hrs
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <!-- FLYER VIÑA -->
-  <div class="flex justify-center">
-    <img
-      src="vina31.jpg"
-      alt="Luna Viña"
-      class="w-full max-w-[420px] rounded-[30px] shadow-2xl border border-pink-500/20"
-    >
-  </div>
+</section>
+
+<style>
+
+.flyers-luna{
+
+  padding:100px 20px;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(255,0,140,.15),
+  transparent 35%),
+
+  radial-gradient(circle at bottom right,
+  rgba(168,85,247,.15),
+  transparent 35%),
+
+  #000;
+}
+
+.titulo-flyers{
+
+  text-align:center;
+
+  color:white;
+
+  font-size:4rem;
+
+  font-weight:900;
+
+  margin-bottom:60px;
+
+  text-shadow:
+  0 0 20px rgba(255,0,180,.4);
+
+}
+
+.flyers-grid{
+
+  max-width:1100px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:50px;
+
+  align-items:start;
+}
+
+.flyer-card{
+
+  position:relative;
+
+  border-radius:35px;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+  0 0 50px rgba(255,0,140,.12);
+
+  transition:.4s;
+}
+
+.flyer-card:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 80px rgba(255,0,180,.3);
+}
+
+.flyer-card img{
+
+  width:100%;
+
+  display:block;
+
+  border-radius:30px;
+}
+
+.flyer-info{
+
+  padding:20px;
+
+  text-align:center;
+}
+
+.flyer-info h3{
+
+  color:#ff7bd8;
+
+  font-size:2rem;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+}
+
+.flyer-info p{
+
+  color:#ddd;
+
+  font-size:1rem;
+}
+
+.glow{
+
+  position:absolute;
+
+  inset:-100px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(255,0,180,.22),
+    transparent 60%
+  );
+
+  filter:blur(70px);
+
+  pointer-events:none;
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+  .flyers-grid{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+  }
+
+  .titulo-flyers{
+
+    font-size:2.5rem;
+  }
+
+}
+
+</style>
+
 <!-- ========================= -->
 <!-- TIKTOK / REELS -->
 <!-- ========================= -->
