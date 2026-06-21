@@ -3752,6 +3752,226 @@ function closeGallery(){
   </p>
 
 </footer>
+<!-- =========================================
+     BARRA FLOTANTE LUNA EN LESBOS
+========================================= -->
 
+<style>
+
+#contador-luna{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(10,10,10,.95);
+    backdrop-filter:blur(15px);
+    z-index:99999;
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transform:translateY(-100%);
+    transition:.4s ease;
+
+    padding:14px 20px;
+}
+
+.contador-contenido{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+
+    color:white;
+    font-size:15px;
+    font-weight:600;
+
+    flex-wrap:wrap;
+}
+
+.evento-ciudad{
+    color:#ff4fd8;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.contador-numero{
+    color:#ffd84d;
+    font-size:22px;
+    font-weight:900;
+}
+
+.btn-luna{
+    background:linear-gradient(
+        135deg,
+        #ff4fd8,
+        #ff85e8
+    );
+
+    color:white;
+    text-decoration:none;
+
+    padding:10px 22px;
+    border-radius:999px;
+
+    font-weight:700;
+
+    box-shadow:0 0 20px rgba(255,79,216,.4);
+
+    transition:.3s;
+
+    animation:pulse 2s infinite;
+}
+
+.btn-luna:hover{
+    transform:scale(1.05);
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contador-contenido{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+<div id="contador-luna">
+
+    <div class="contador-contenido">
+
+        <span class="evento-ciudad" id="evento-nombre">
+            VIÑA DEL MAR
+        </span>
+
+        <span>
+            🌙 Próxima Luna en
+        </span>
+
+        <span
+            class="contador-numero"
+            id="dias-restantes"
+        >
+            0
+        </span>
+
+        <span>días</span>
+
+        <span>
+            🔥 Últimos cupos disponibles
+        </span>
+
+        <a
+            id="btn-entradas"
+            href="#entradas"
+            class="btn-luna"
+        >
+            Comprar Entradas
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+const eventos = [
+
+{
+    nombre: "VIÑA DEL MAR",
+    fecha: new Date("2026-07-31T20:00:00"),
+    link: "#entradas"
+},
+
+{
+    nombre: "SANTIAGO",
+    fecha: new Date("2026-08-07T20:00:00"),
+    link: "#entradas"
+}
+
+];
+
+function actualizarEvento(){
+
+    const ahora = new Date();
+
+    const proximoEvento =
+        eventos.find(
+            evento => evento.fecha > ahora
+        );
+
+    if(!proximoEvento) return;
+
+    const diferencia =
+        proximoEvento.fecha - ahora;
+
+    const dias =
+        Math.ceil(
+            diferencia /
+            (1000 * 60 * 60 * 24)
+        );
+
+    document.getElementById(
+        "evento-nombre"
+    ).textContent =
+        proximoEvento.nombre;
+
+    document.getElementById(
+        "dias-restantes"
+    ).textContent =
+        dias;
+
+    document.getElementById(
+        "btn-entradas"
+    ).href =
+        proximoEvento.link;
+
+}
+
+actualizarEvento();
+
+window.addEventListener('scroll', () => {
+
+    const barra =
+        document.getElementById(
+            'contador-luna'
+        );
+
+    if(window.scrollY > 400){
+
+        barra.style.transform =
+            'translateY(0)';
+
+    }else{
+
+        barra.style.transform =
+            'translateY(-100%)';
+
+    }
+
+});
+
+</script>
 </body>
 </html>
