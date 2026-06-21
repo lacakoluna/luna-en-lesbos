@@ -2814,13 +2814,14 @@ Es una experiencia donde puedes sentirte libre, cómoda y parte de algo especial
       <!-- EVENTO 2 -->
       <div
         onclick="openModal(
-        '13vin.jpg',
-        'LUNA 2°EDICIÓN VIÑA JULIO 31- 2026',
-        'NUEVA JUNTA en viña del mar',
-        'Viernes 31 de Julio · 19:30 hrs ',
-        'https://www.passline.com/eventos/luna-en-lesbos-vina-del-mar-2edicion-2026"
-        class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
-      >
+    '13vin.jpg',
+    'LUNA 2° EDICIÓN VIÑA JULIO 31 - 2026',
+    'NUEVA JUNTA en Viña del Mar',
+    'Viernes 31 de Julio · 19:30 hrs',
+    'https://www.passline.com/eventos/luna-en-lesbos-vina-del-mar-2edicion-2026'
+  )"
+  class="cursor-pointer bg-white/5 border border-fuchsia-500/20 rounded-[35px] overflow-hidden hover:scale-105 transition duration-300"
+>
 
         <img src="vina31.jpg" class="h-80 w-full object-cover">
 
@@ -2964,6 +2965,20 @@ function closeModal(){
   document.getElementById('eventModal').classList.add('hidden');
   document.getElementById('eventModal').classList.remove('flex');
 
+}
+
+function openModal(image, title, description, date, link){
+
+  alert(link);
+
+  document.getElementById('modalImage').src = image;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalDate').innerText = date;
+  document.getElementById('modalLink').href = link;
+
+  document.getElementById('eventModal').classList.remove('hidden');
+  document.getElementById('eventModal').classList.add('flex');
 }
 
 </script>
