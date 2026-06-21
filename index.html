@@ -49,6 +49,131 @@
   </style>
 
 </head>
+
+
+<body>
+
+<!-- =========================================
+     FONDO PREMIUM LUNA EN LESBOS
+========================================= -->
+
+<style>
+
+.fondo-luna-lesbos{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+
+    background:
+    radial-gradient(
+        circle at top center,
+        rgba(255,79,216,.08),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at bottom,
+        rgba(170,100,255,.06),
+        transparent 40%
+    ),
+
+    #050505;
+}
+
+.fondo-luna-lesbos span{
+
+    position:absolute;
+
+    color:#ff6be5;
+
+    opacity:.05;
+
+    font-size:50px;
+
+    animation:
+    flotar 30s linear infinite;
+}
+
+/* POSICIONES */
+
+.fondo-luna-lesbos span:nth-child(1){
+    left:8%;
+    top:15%;
+}
+
+.fondo-luna-lesbos span:nth-child(2){
+    left:22%;
+    top:70%;
+}
+
+.fondo-luna-lesbos span:nth-child(3){
+    left:40%;
+    top:20%;
+}
+
+.fondo-luna-lesbos span:nth-child(4){
+    left:58%;
+    top:60%;
+}
+
+.fondo-luna-lesbos span:nth-child(5){
+    left:75%;
+    top:25%;
+}
+
+.fondo-luna-lesbos span:nth-child(6){
+    left:88%;
+    top:80%;
+}
+
+.fondo-luna-lesbos span:nth-child(7){
+    left:35%;
+    top:50%;
+}
+
+.fondo-luna-lesbos span:nth-child(8){
+    left:60%;
+    top:88%;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    50%{
+        transform:
+        translateY(-25px)
+        rotate(8deg);
+    }
+
+    100%{
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+}
+
+</style>
+
+<div class="fondo-luna-lesbos">
+
+    <span>🌙</span>
+    <span>⚢</span>
+    <span>🌙</span>
+    <span>⚢</span>
+    <span>🌙</span>
+    <span>⚢</span>
+    <span>🌙</span>
+    <span>⚢</span>
+
+</div>
 <!-- ========================= -->
 <!-- BOTON FLOTANTE WHATSAPP -->
 <!-- ========================= -->
