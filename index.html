@@ -1841,109 +1841,53 @@ const timerStgo = setInterval(function(){
         </div>
 
         <!-- ========================= -->
-        <!-- COUNTDOWN -->
-        <!-- ========================= -->
+<!-- COUNTDOWN VIÑA -->
+<!-- ========================= -->
 
-        <div class="grid grid-cols-4 gap-4 mb-12">
+<div class="grid grid-cols-4 gap-4 mb-12">
 
-          <!-- DIAS -->
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
-
-            <div id="days-vina" class="text-4xl font-black text-pink-500">
-              20
-            </div>
-
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Días
-            </p>
-
-          </div>
-
-          <!-- HORAS -->
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
-
-            <div id="hours-vina" class="text-4xl font-black text-pink-500">
-              00
-            </div>
-
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Horas
-            </p>
-
-          </div>
-
-          <!-- MIN -->
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
-
-            <div id="minutes-vina" class="text-4xl font-black text-pink-500">
-              00
-            </div>
-
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Min
-            </p>
-
-          </div>
-
-          <!-- SEG -->
-          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
-
-            <div id="seconds-vina" class="text-4xl font-black text-pink-500">
-              00
-            </div>
-
-            <p class="text-white/50 text-sm uppercase mt-2">
-              Seg
-            </p>
-
-          </div>
-
-        </div>
-
-        <!-- BOTON -->
-        <a
-          href="https://www.passline.com/eventos/luna-en-lesbos-vina-del-mar-1edicion-2026"
-          class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-pink-600 hover:bg-pink-500 transition duration-300 text-xl font-bold shadow-2xl hover:scale-105"
-        >
-          Comprar Entradas 🎟️
-        </a>
-
-      </div>
-
-      <!-- DERECHA -->
-      <div class="relative">
-
-        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
-
-          <img
-            src="vina31.jpg"
-            alt="Luna en Lesbos"
-            class="w-full object-cover"
-          >
-
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+    <div id="days-vina" class="text-4xl font-black text-pink-500">00</div>
+    <p class="text-white/50 text-sm uppercase mt-2">Días</p>
   </div>
 
-</section>
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+    <div id="hours-vina" class="text-4xl font-black text-pink-500">00</div>
+    <p class="text-white/50 text-sm uppercase mt-2">Horas</p>
+  </div>
 
-<!-- ========================= -->
-<!-- SCRIPT COUNTDOWN -->
-<!-- ========================= -->
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+    <div id="minutes-vina" class="text-4xl font-black text-pink-500">00</div>
+    <p class="text-white/50 text-sm uppercase mt-2">Min</p>
+  </div>
+
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
+    <div id="seconds-vina" class="text-4xl font-black text-pink-500">00</div>
+    <p class="text-white/50 text-sm uppercase mt-2">Seg</p>
+  </div>
+
+</div>
 
 <script>
 
-const countdownVina = new Date("Julio 31, 2026 19:30:00").getTime();
+const countdownVina = new Date("2026-07-31T19:30:00").getTime();
 
-const timerVina = setInterval(function(){
+const timerVina = setInterval(() => {
 
   const now = new Date().getTime();
-
   const distance = countdownVina - now;
+
+  if (distance < 0) {
+
+    clearInterval(timerVina);
+
+    document.getElementById("days-vina").innerHTML = "00";
+    document.getElementById("hours-vina").innerHTML = "00";
+    document.getElementById("minutes-vina").innerHTML = "00";
+    document.getElementById("seconds-vina").innerHTML = "00";
+
+    return;
+  }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
@@ -1966,21 +1910,9 @@ const timerVina = setInterval(function(){
   document.getElementById("minutes-vina").innerHTML = minutes;
   document.getElementById("seconds-vina").innerHTML = seconds;
 
-  if(distance < 0){
-
-    clearInterval(timerVina);
-
-    document.getElementById("days-vina").innerHTML = "00";
-    document.getElementById("hours-vina").innerHTML = "00";
-    document.getElementById("minutes-vina").innerHTML = "00";
-    document.getElementById("seconds-vina").innerHTML = "00";
-
-  }
-
-},1000);
+}, 1000);
 
 </script>
-
 
       <!-- DERECHA / FLYER -->
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
