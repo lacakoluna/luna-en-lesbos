@@ -4196,96 +4196,327 @@ function closeGallery(){
 
 </section>
 
-<!-- EL MERCH -->
+<!-- ==========================
+MERCH LUNA EN LESBOS
+========================== -->
 
 <section class="py-24 bg-gradient-to-b from-black to-[#120018]">
 
-  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-5xl font-black text-center mb-4 text-white">
-      🌙 Lleva Luna Contigo
-    </h2>
+        <h2 class="text-5xl font-black text-center mb-4 text-white">
+            🌙 Lleva Luna Contigo
+        </h2>
 
-    <p class="text-center text-gray-300 max-w-2xl mx-auto mb-16">
-      Poleras, gorros y accesorios oficiales de Luna en Lesbos.
-    </p>
+        <p class="text-center text-gray-300 max-w-2xl mx-auto mb-16">
+            Poleras, gorros y accesorios oficiales de Luna en Lesbos.
+        </p>
 
-    <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- POLERA -->
-      <div class="bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
+            <!-- POLERA -->
+            <div class="producto-card bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
 
-        <img src="polera-luna.jpg" class="w-full h-80 object-cover">
+                <div class="relative h-80 overflow-hidden">
 
-        <div class="p-6">
+                    <div class="slider flex h-full transition-transform duration-500">
 
-          <h3 class="text-2xl font-bold text-white mb-3">
-            👕 Polera Oficial
-          </h3>
+                        <img src="polera1.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="polera2.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="polera3.jpg" class="w-full h-80 object-cover flex-shrink-0">
 
-          <p class="text-gray-300 mb-6">
-            Edición limitada Luna en Lesbos.
-          </p>
+                    </div>
 
-          <button class="w-full bg-fuchsia-600 py-3 rounded-full font-bold">
-            Reservar
-          </button>
+                    <button class="prev absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ‹
+                    </button>
+
+                    <button class="next absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="p-6">
+
+                    <span class="bg-fuchsia-600 text-white text-xs px-3 py-1 rounded-full">
+                        Más Vendido
+                    </span>
+
+                    <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                        👕 Polera Oficial
+                    </h3>
+
+                    <p class="text-gray-300 mb-4">
+                        Streetwear premium Luna en Lesbos.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-fuchsia-400 font-bold text-xl">
+                            $20.990
+                        </span>
+
+                        <button onclick="abrirModal('polera')" class="bg-fuchsia-600 px-5 py-2 rounded-full text-white font-bold">
+                            Ver Detalles
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- GORRO -->
+            <div class="producto-card bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
+
+                <div class="relative h-80 overflow-hidden">
+
+                    <div class="slider flex h-full transition-transform duration-500">
+
+                        <img src="gorro1.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="gorro2.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="gorro3.jpg" class="w-full h-80 object-cover flex-shrink-0">
+
+                    </div>
+
+                    <button class="prev absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ‹
+                    </button>
+
+                    <button class="next absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="p-6">
+
+                    <span class="bg-fuchsia-600 text-white text-xs px-3 py-1 rounded-full">
+                        Nuevo
+                    </span>
+
+                    <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                        🧢 Gorro Luna
+                    </h3>
+
+                    <p class="text-gray-300 mb-4">
+                        Estilo urbano con identidad Luna.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-fuchsia-400 font-bold text-xl">
+                            $15.000
+                        </span>
+
+                        <button onclick="abrirModal('gorro')" class="bg-fuchsia-600 px-5 py-2 rounded-full text-white font-bold">
+                            Ver Detalles
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BANDANA -->
+            <div class="producto-card bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
+
+                <div class="relative h-80 overflow-hidden">
+
+                    <div class="slider flex h-full transition-transform duration-500">
+
+                        <img src="bandana1.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="bandana2.jpg" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="bandana3.jpg" class="w-full h-80 object-cover flex-shrink-0">
+
+                    </div>
+
+                    <button class="prev absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ‹
+                    </button>
+
+                    <button class="next absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 w-10 h-10 rounded-full text-white">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="p-6">
+
+                    <span class="bg-fuchsia-600 text-white text-xs px-3 py-1 rounded-full">
+                        Edición Limitada
+                    </span>
+
+                    <h3 class="text-2xl font-bold text-white mt-3 mb-2">
+                        🌈 Bandana Luna
+                    </h3>
+
+                    <p class="text-gray-300 mb-4">
+                        Diseño exclusivo para la comunidad.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-fuchsia-400 font-bold text-xl">
+                            $9.990
+                        </span>
+
+                        <button onclick="abrirModal('bandana')" class="bg-fuchsia-600 px-5 py-2 rounded-full text-white font-bold">
+                            Ver Detalles
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-
-      </div>
-
-      <!-- GORRO -->
-      <div class="bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
-
-        <img src="gorro-luna.jpg" class="w-full h-80 object-cover">
-
-        <div class="p-6">
-
-          <h3 class="text-2xl font-bold text-white mb-3">
-            🧢 Gorro Luna
-          </h3>
-
-          <p class="text-gray-300 mb-6">
-            Estilo urbano con identidad Luna.
-          </p>
-
-          <button class="w-full bg-fuchsia-600 py-3 rounded-full font-bold">
-            Reservar
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- BANDANA -->
-      <div class="bg-white/5 rounded-[30px] overflow-hidden border border-fuchsia-500/20 hover:scale-105 transition">
-
-        <img src="bandana-luna.jpg" class="w-full h-80 object-cover">
-
-        <div class="p-6">
-
-          <h3 class="text-2xl font-bold text-white mb-3">
-            🌈 Bandana Luna
-          </h3>
-
-          <p class="text-gray-300 mb-6">
-            Edición especial para la comunidad.
-          </p>
-
-          <button class="w-full bg-fuchsia-600 py-3 rounded-full font-bold">
-            Reservar
-          </button>
-
-        </div>
-
-      </div>
 
     </div>
 
-  </div>
-
 </section>
+
+<!-- MODAL -->
+
+<div id="modalProducto" class="fixed inset-0 bg-black/80 hidden z-50 items-center justify-center p-6">
+
+    <div class="bg-[#17001f] border border-fuchsia-500 rounded-3xl max-w-xl w-full p-8 relative">
+
+        <button onclick="cerrarModal()"
+            class="absolute top-4 right-5 text-white text-3xl">
+            ×
+        </button>
+
+        <h2 id="tituloProducto"
+            class="text-3xl font-black text-white mb-4">
+        </h2>
+
+        <p id="descripcionProducto"
+            class="text-gray-300 mb-6">
+        </p>
+
+        <div class="space-y-2 text-gray-200 mb-8">
+
+            <p><strong>✔ Calidad Premium</strong></p>
+            <p><strong>✔ Edición Oficial Luna en Lesbos</strong></p>
+            <p><strong>✔ Producción Limitada</strong></p>
+
+        </div>
+
+        <a href="https://wa.me/56900000000"
+            target="_blank"
+            class="block text-center w-full py-4 bg-fuchsia-600 rounded-full text-white font-bold text-lg hover:bg-fuchsia-500">
+
+            Comprar Ahora
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirModal(producto){
+
+const modal=document.getElementById("modalProducto");
+
+modal.classList.remove("hidden");
+modal.classList.add("flex");
+
+if(producto==="polera"){
+
+document.getElementById("tituloProducto").innerHTML="👕 Polera Oficial Luna";
+
+document.getElementById("descripcionProducto").innerHTML=
+"Polera premium color negro profundo con logo Luna en Lesbos frontal y diseño exclusivo en la espalda.";
+
+}
+
+if(producto==="gorro"){
+
+document.getElementById("tituloProducto").innerHTML="🧢 Gorro Luna";
+
+document.getElementById("descripcionProducto").innerHTML=
+"Gorro estilo jockey premium bordado con logo oficial Luna en Lesbos.";
+
+}
+
+if(producto==="bandana"){
+
+document.getElementById("tituloProducto").innerHTML="🌈 Bandana Luna";
+
+document.getElementById("descripcionProducto").innerHTML=
+"Bandana exclusiva para eventos, encuentros y orgullo lésbico.";
+
+}
+
+}
+
+function cerrarModal(){
+
+document.getElementById("modalProducto").classList.add("hidden");
+document.getElementById("modalProducto").classList.remove("flex");
+
+}
+
+document.querySelectorAll(".producto-card").forEach(card=>{
+
+const slider=card.querySelector(".slider");
+const slides=slider.children;
+
+let index=0;
+
+function mover(){
+
+index++;
+
+if(index>=slides.length){
+
+index=0;
+
+}
+
+slider.style.transform=`translateX(-${index*100}%)`;
+
+}
+
+setInterval(mover,3000);
+
+card.querySelector(".next").onclick=()=>{
+
+index++;
+
+if(index>=slides.length){
+
+index=0;
+
+}
+
+slider.style.transform=`translateX(-${index*100}%)`;
+
+};
+
+card.querySelector(".prev").onclick=()=>{
+
+index--;
+
+if(index<0){
+
+index=slides.length-1;
+
+}
+
+slider.style.transform=`translateX(-${index*100}%)`;
+
+};
+
+});
+
+</script>
 
 <!-- =========================================
      NEWSLETTER LUNA EN LESBOS
