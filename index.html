@@ -1524,6 +1524,10 @@ body{
 <!-- ========================= -->
 <!-- PROXIMO EVENTO LUNA STGO -->
 <!-- ========================= -->
+```html
+<!-- ========================= -->
+<!-- PROXIMO EVENTO LUNA STGO -->
+<!-- ========================= -->
 
 <section id="proximo-evento-stgo" class="relative py-28 bg-black text-white overflow-hidden">
 
@@ -1565,12 +1569,9 @@ body{
         <!-- INFO -->
         <div class="space-y-6 mb-12">
 
-          <!-- FECHA -->
           <div class="flex items-center gap-4">
 
-            <div class="text-4xl">
-              📅
-            </div>
+            <div class="text-4xl">📅</div>
 
             <div>
 
@@ -1579,19 +1580,16 @@ body{
               </p>
 
               <h3 class="text-2xl font-bold">
-                Viernes 7 de agosto · 19:00 hrs
+                Viernes 7 de Agosto · 19:00 hrs
               </h3>
 
             </div>
 
           </div>
 
-          <!-- LUGAR -->
           <div class="flex items-center gap-4">
 
-            <div class="text-4xl">
-              📍
-            </div>
+            <div class="text-4xl">📍</div>
 
             <div>
 
@@ -1609,17 +1607,14 @@ body{
 
         </div>
 
-        <!-- ========================= -->
         <!-- COUNTDOWN -->
-        <!-- ========================= -->
 
         <div class="grid grid-cols-4 gap-4 mb-12">
 
-          <!-- DIAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="days-stgo" class="text-4xl font-black text-pink-500">
-              30
+              00
             </div>
 
             <p class="text-white/50 text-sm uppercase mt-2">
@@ -1628,7 +1623,6 @@ body{
 
           </div>
 
-          <!-- HORAS -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="hours-stgo" class="text-4xl font-black text-pink-500">
@@ -1641,7 +1635,6 @@ body{
 
           </div>
 
-          <!-- MIN -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="minutes-stgo" class="text-4xl font-black text-pink-500">
@@ -1654,7 +1647,6 @@ body{
 
           </div>
 
-          <!-- SEG -->
           <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-pink-500/20">
 
             <div id="seconds-stgo" class="text-4xl font-black text-pink-500">
@@ -1670,6 +1662,7 @@ body{
         </div>
 
         <!-- BOTON -->
+
         <a
           href="https://www.passline.com/eventos/luna-es-lesbos-4edicion-2026"
           target="_blank"
@@ -1680,15 +1673,16 @@ body{
 
       </div>
 
-      <!-- DERECHA -->
-      <div class="relative">
+      <!-- DERECHA / FLYER -->
 
-        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20">
+      <div class="flex justify-center">
+
+        <div class="relative overflow-hidden rounded-[40px] shadow-[0_0_80px_rgba(255,0,120,0.25)] border border-pink-500/20 max-w-[420px] mx-auto">
 
           <img
             src="LUNA7AGOSTO.jpg"
             alt="Luna en Lesbos"
-            class="w-full object-cover"
+            class="w-full h-auto object-contain"
           >
 
         </div>
@@ -1707,13 +1701,25 @@ body{
 
 <script>
 
-const countdownStgo = new Date("June 12, 2026 19:00:00").getTime();
+const countdownStgo = new Date("2026-08-07T19:00:00").getTime();
 
 const timerStgo = setInterval(function(){
 
   const now = new Date().getTime();
 
   const distance = countdownStgo - now;
+
+  if(distance < 0){
+
+    clearInterval(timerStgo);
+
+    document.getElementById("days-stgo").innerHTML = "00";
+    document.getElementById("hours-stgo").innerHTML = "00";
+    document.getElementById("minutes-stgo").innerHTML = "00";
+    document.getElementById("seconds-stgo").innerHTML = "00";
+
+    return;
+  }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
@@ -1736,27 +1742,20 @@ const timerStgo = setInterval(function(){
   document.getElementById("minutes-stgo").innerHTML = minutes;
   document.getElementById("seconds-stgo").innerHTML = seconds;
 
-  if(distance < 0){
-
-    clearInterval(timerStgo);
-
-    document.getElementById("days-stgo").innerHTML = "00";
-    document.getElementById("hours-stgo").innerHTML = "00";
-    document.getElementById("minutes-stgo").innerHTML = "00";
-    document.getElementById("seconds-stgo").innerHTML = "00";
-
-  }
-
 },1000);
 
 </script>
 
 
-<!-- ========================= -->
-<!-- EVENTO VIÑA FINAL CORREGIDO -->
-<!-- ========================= -->
 
-```html
+
+
+
+
+
+
+
+
 <!-- ========================= -->
 <!-- PROXIMO EVENTO LUNA VIÑA -->
 <!-- ========================= -->
@@ -1938,11 +1937,8 @@ const timerVina = setInterval(function(){
 
 
   
-
-<!-- FLYER juntos -->
-```html
 <!-- ========================================= -->
-<!-- FLYERS EVENTOS LUNA -->
+<!-- FLYERS juntos EVENTOS LUNA -->
 <!-- ========================================= -->
 
 <section class="flyers-luna">
