@@ -6,12 +6,15 @@
 
   <title>Luna en Lesbos</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FUENTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -486,28 +489,201 @@ html{
   <div class="hero-overlay"></div>
   <div class="hero-gradient"></div>
 
-  <!-- CONTENIDO -->
-  <div class="hero-content">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <p>
-      Comunidad • Mujeres • Experiencia
-    </p>
+<style>
 
-    <h1>
-      LUNA EN LESBOS
+/* ========================= */
+/* HERO PREMIUM LUNA */
+/* ========================= */
+
+.hero-content{
+
+    position:relative;
+    z-index:4;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.hero-tag{
+
+    display:block;
+
+    font-family:'Montserrat',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:8px;
+
+    color:#e8cfff;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 15px rgba(216,180,254,.4);
+}
+
+.hero-title{
+
+    font-family:'Cinzel',serif;
+
+    font-size:7rem;
+
+    font-weight:800;
+
+    line-height:.9;
+
+    letter-spacing:10px;
+
+    margin-bottom:20px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f9e6a3 40%,
+        #d8b4fe 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+    0 0 25px rgba(249,230,163,.25),
+    0 0 60px rgba(216,180,254,.25);
+}
+
+.hero-subtitle{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1.7rem;
+
+    font-weight:300;
+
+    color:white;
+
+    line-height:1.6;
+
+    max-width:900px;
+
+    margin:0 auto 45px;
+
+    opacity:.95;
+}
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        90deg,
+        #c026d3,
+        #ec4899
+    );
+
+    box-shadow:
+    0 0 40px rgba(236,72,153,.35);
+
+    transition:.3s ease;
+}
+
+.hero-button:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 70px rgba(236,72,153,.55);
+}
+
+@media(max-width:768px){
+
+    .hero-title{
+
+        font-size:3.5rem;
+
+        letter-spacing:3px;
+    }
+
+    .hero-subtitle{
+
+        font-size:1.05rem;
+
+        padding:0 15px;
+    }
+
+    .hero-tag{
+
+        font-size:11px;
+
+        letter-spacing:4px;
+    }
+
+    .hero-button{
+
+        width:100%;
+
+        max-width:320px;
+    }
+
+}
+
+</style>
+
+<div class="hero-content">
+
+    <span class="hero-tag">
+        COMUNIDAD • EXPERIENCIAS • CONEXIÓN
+    </span>
+
+    <h1 class="hero-title">
+        LUNA EN LESBOS
     </h1>
 
+    <h2 class="hero-subtitle">
+        Donde las mujeres se encuentran, conectan y crean comunidad.
+    </h2>
 
     <a
-      class="hero-button"
-      href="https://www.passline.com/eventos/luna-es-lesbos-3edicion-2026"
-      target="_blank"
+        class="hero-button"
+        href="https://www.passline.com/eventos/luna-es-lesbos-4edicion-2026"
+        target="_blank"
     >
-      Comprar Entradas 🎟️
+        COMPRAR ENTRADAS 🎟️
     </a>
 
-
-</section>
+</div>
 
 <!-- CARRUSEL -->
 <section class="relative py-12 overflow-hidden bg-black">
