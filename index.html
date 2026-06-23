@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,15 +7,12 @@
 
   <title>Luna en Lesbos</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FUENTE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -68,6 +66,7 @@ html{
 </head>
 
 
+<body>
 
 <!-- =========================================
      FONDO PREMIUM LUNA EN LESBOS
@@ -81,6 +80,7 @@ html{
     overflow:hidden;
     pointer-events:none;
     z-index:0;
+}
 
     background:
     radial-gradient(
@@ -88,11 +88,13 @@ html{
         rgba(255,79,216,.08),
         transparent 40%
     ),
+
     radial-gradient(
         circle at bottom,
         rgba(170,100,255,.06),
         transparent 40%
     ),
+
     #050505;
 }
 
@@ -221,7 +223,7 @@ html{
   </div>
 
 </a>
-
+<body class="min-h-screen text-white overflow-x-hidden">
 
   <!-- BOTÓN FLOTANTE COMPRAR ENTRADAS -->
 <a href="https://www.passline.com/eventos/luna-es-lesbos-4edicion-2026" 
@@ -4941,209 +4943,6 @@ window.addEventListener('scroll', () => {
             'translateY(-100%)';
 
     }
-
-});
-
-</script>
-
-<!-- ========================================= -->
-<!-- POPUP PRIDE EDITION LUNA EN LESBOS -->
-<!-- ========================================= -->
-
-<style>
-
-#pridePopup{
-    position:fixed;
-    inset:0;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:rgba(0,0,0,.88);
-    backdrop-filter:blur(10px);
-
-    z-index:999999;
-
-    animation:popupFadeIn .5s ease;
-}
-
-.popup-container{
-
-    position:relative;
-
-    width:90%;
-    max-width:520px;
-
-    text-align:center;
-
-    animation:popupZoom .6s ease;
-
-}
-
-.popup-flyer{
-
-    width:100%;
-    display:block;
-
-    border-radius:30px;
-
-    box-shadow:
-    0 0 60px rgba(255,0,180,.35);
-
-    border:1px solid rgba(255,255,255,.15);
-}
-
-.popup-badge{
-
-    position:absolute;
-
-    top:20px;
-    left:20px;
-
-    background:#ff2d75;
-
-    color:white;
-
-    font-size:13px;
-
-    font-weight:800;
-
-    padding:10px 16px;
-
-    border-radius:999px;
-
-    letter-spacing:1px;
-
-    box-shadow:
-    0 0 20px rgba(255,0,180,.4);
-}
-
-.popup-btn{
-
-    display:block;
-
-    margin-top:20px;
-
-    padding:18px 20px;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    font-weight:900;
-
-    color:white;
-
-    font-size:18px;
-
-    background:
-    linear-gradient(
-      90deg,
-      #ff2d75,
-      #ff6be5
-    );
-
-    box-shadow:
-    0 0 30px rgba(255,0,180,.4);
-
-    transition:.3s;
-}
-
-.popup-btn:hover{
-
-    transform:scale(1.03);
-
-}
-
-@keyframes popupZoom{
-
-    from{
-        opacity:0;
-        transform:scale(.8);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-
-}
-
-@keyframes popupFadeIn{
-
-    from{
-        opacity:0;
-    }
-
-    to{
-        opacity:1;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .popup-container{
-        width:92%;
-    }
-
-    .popup-btn{
-        font-size:16px;
-    }
-
-}
-
-</style>
-
-<div id="pridePopup">
-
-    <div class="popup-container">
-
-        <div class="popup-badge">
-            🌈 PRIDE EDITION
-        </div>
-
-        <!-- CAMBIA EL NOMBRE POR TU FLYER -->
-        <img
-            src="pride.jpg"
-            alt="Fiesta Pride Edition Luna en Lesbos"
-            class="popup-flyer"
-        >
-
-        <a
-            href="https://www.passline.com/eventos/fiesta-pride-edition-luna-en-lesbos"
-            target="_blank"
-            class="popup-btn"
-        >
-            🎟️ COMPRAR ENTRADA
-        </a>
-
-    </div>
-
-</div>
-
-<script>
-
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-        const popup =
-        document.getElementById("pridePopup");
-
-        popup.style.transition =
-        "opacity .8s ease";
-
-        popup.style.opacity = "0";
-
-        setTimeout(() => {
-
-            popup.remove();
-
-        },800);
-
-    },2000);
 
 });
 
